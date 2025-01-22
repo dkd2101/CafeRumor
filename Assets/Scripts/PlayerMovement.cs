@@ -12,6 +12,9 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
 
+    public DialogueUI dialogueUI;
+    public IInteractable interactable { get; set; }
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -20,6 +23,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (dialogueUI.IsOpen)
+        {
+            movement = Vector2.zero;
+            rb.velocity = Vector2.zero;
+            animator.SetFloat("Horizontal", 0);
+            animator.SetFloat("Vertical", 0);
+            return;
+        };
+        
         movement.Set(InputManager.Moveement.x, InputManager.Moveement.y);
 
         rb.velocity = movement * moveSpeed;
@@ -31,6 +43,11 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetFloat("LastHorizontal", movement.x);
             animator.SetFloat("LastVertical", movement.y);
+        }
+
+        if (InputManager.interactKey.triggered && !dialogueUI.IsOpen)
+        {
+            interactable?.Interact(this);
         }
     }
 }

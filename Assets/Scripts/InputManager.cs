@@ -9,16 +9,21 @@ public class InputManager : MonoBehaviour
 
     private PlayerInput playerInput;
     private InputAction moveAction;
+    public static InputAction advanceDialogue;
+    public static InputAction interactKey;
 
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
 
         moveAction = playerInput.actions["Move"];
+        advanceDialogue = playerInput.actions["ContinueDialogue"];
+        interactKey = playerInput.actions["Interact"];
     }
 
     private void Update()
     {
         Moveement = moveAction.ReadValue<Vector2>();
+        // advanceDialogue.performed += ctx => Debug.Log($"Input detected: {ctx.control}");
     }
 }
