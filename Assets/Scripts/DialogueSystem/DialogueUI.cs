@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class DialogueUI : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class DialogueUI : MonoBehaviour
 
     private void Start()
     {
-        closeDialogueBox();
+        CloseDialogueBox();
         typewriterEffect = GetComponent<TypewriterEffect>();
         responseHandler = GetComponent<ResponseHandler>();
     }
@@ -39,8 +40,8 @@ public class DialogueUI : MonoBehaviour
 
             if (i == dialogueObject.Dialogue.Length - 1 && dialogueObject.HasResponses) break;
             
-            // must wait to make sure advanceDialogue is not still triggered
-            // yield return new WaitUntil(() => !InputManager.advanceDialogue.triggered); // Wait for release
+            // must wait a frame to make sure advanceDialogue is not still triggered
+            yield return null;
 
             yield return new WaitUntil(() => InputManager.advanceDialogue.triggered);
         }
@@ -51,7 +52,7 @@ public class DialogueUI : MonoBehaviour
         }
         else
         {
-            closeDialogueBox();
+            CloseDialogueBox();
         }
     }
 
@@ -62,15 +63,15 @@ public class DialogueUI : MonoBehaviour
         while (typewriterEffect.IsRunning)
         {
             yield return null;
-
+            
             if (InputManager.advanceDialogue.triggered)
             {
-                // typewriterEffect.Stop();
+                typewriterEffect.Stop();
             }
         }
     }
 
-    private void closeDialogueBox()
+    private void CloseDialogueBox()
     {
         IsOpen = false;
         dialogueBox.SetActive(false);

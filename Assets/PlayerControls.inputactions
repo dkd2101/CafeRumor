@@ -16,7 +16,7 @@
                 },
                 {
                     "name": "ContinueDialogue",
-                    "type": "PassThrough",
+                    "type": "Button",
                     "id": "03a07bf8-4ee5-40ca-92d8-aa49e06ac6cc",
                     "expectedControlType": "Button",
                     "processors": "",
@@ -159,7 +159,7 @@
                     "name": "",
                     "id": "8c89517e-2e95-4b51-872f-407017011885",
                     "path": "<Mouse>/leftButton",
-                    "interactions": "Press",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "ContinueDialogue",
