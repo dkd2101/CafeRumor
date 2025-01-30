@@ -81,17 +81,34 @@ namespace GameTime
             this.seconds = seconds;
         }
 
-        public string getTimeAsString(String flag = "default")
+        public string getTimeAsString(String flag = "default", int minuteMod = 60)
         {
             switch (flag)
             {
-                case "dateTime":
+                case "UIFormatting":
                     int displayedHours = hours % 12;
                     if (displayedHours == 0)
                     {
                         displayedHours = 12;
                     }
-                    return $"{displayedHours:D2}:{minutes:D2}:{(int)seconds:D2}";
+                    String str = $"{displayedHours:D2}:{minuteMod * (minutes / minuteMod):D2}";
+                    if (str.Substring(0, 1).Equals("0"))
+                    {
+                        str = str.Substring(1, str.Length - 1);
+                    }
+
+                    if (hours > 11)
+                    {
+                        str += " PM\n";
+                    }
+                    else
+                    {
+                        str += " AM\n";
+                    }
+
+                    str += $"Day {(int)dayOfWeek + 1}";
+
+                    return str;
                 case "default":
                 default:
                     return $"{hours:D2}:{minutes:D2}:{(int)seconds:D2}";
