@@ -6,9 +6,9 @@ namespace GameTime
 {
     public enum DayOfWeek
     {
-        FIRST_DAY,
-        SECOND_DAY,
-        THRID_DAY,
+        FIRST_DAY = 0,
+        SECOND_DAY = 1,
+        THRID_DAY = 2,
     }
 
     public enum PartOfDay
@@ -25,8 +25,16 @@ namespace GameTime
         [SerializeField] private int hours;
         [SerializeField] private int minutes;
         [SerializeField] private float seconds;
-        private int startOfDay = 6;
-        private int endOfDay = 18;
+
+        public DayOfWeek DayOfWeek { get => dayOfWeek; private set => dayOfWeek = value; }
+        public PartOfDay PartOfDay { get => partOfDay; private set => partOfDay = value; }
+        public int Hours { get => hours; private set => hours = value; }
+        public int Minutes { get => minutes; private set => minutes = value; }
+        public float Seconds { get => seconds; private set => seconds = value; }
+
+
+        private const int startOfDay = 6;
+        private const int endOfDay = 18;
 
         public TimeOfDay(int hours = 0, int minutes = 0, int seconds = 0)
         {
@@ -50,27 +58,44 @@ namespace GameTime
                 minutes %= 60;
             }
 
-            if (this.partOfDay != PartOfDay.DAYTIME && hours is < 18 and >= 6)
+            if (partOfDay != PartOfDay.DAYTIME && hours is < endOfDay and >= startOfDay)
             {
-                this.partOfDay = PartOfDay.DAYTIME;
-            } else if (this.partOfDay != PartOfDay.NIGHTTIME && hours is < 6 or >= 18)
+                partOfDay = PartOfDay.DAYTIME;
+            } else if (partOfDay != PartOfDay.NIGHTTIME && hours is < startOfDay or >= endOfDay)
             {
-                this.partOfDay = PartOfDay.NIGHTTIME;
+                partOfDay = PartOfDay.NIGHTTIME;
             }
 
-            hours %= 24;
+            if (hours >= 24)
+            {
+                dayOfWeek = (DayOfWeek)(((int)dayOfWeek + hours / 24) % 3);
+                hours %= 24;
+            }
         }
         
-        public void setTime(int hours = 0, int minutes = 0, float seconds = 0)
+        public void setTime(DayOfWeek dayOfWeek = DayOfWeek.FIRST_DAY, int hours = 0, int minutes = 0, float seconds = 0)
         {
+            this.dayOfWeek = dayOfWeek;
             this.hours = hours;
             this.minutes = minutes;
             this.seconds = seconds;
         }
 
-        public string getTimeAsString()
+        public string getTimeAsString(String flag = "default")
         {
-            return $"{hours:D2}:{minutes:D2}:{(int)seconds:D2}";
+            switch (flag)
+            {
+                case "dateTime":
+                    int displayedHours = hours % 12;
+                    if (displayedHours == 0)
+                    {
+                        displayedHours = 12;
+                    }
+                    return $"{displayedHours:D2}:{minutes:D2}:{(int)seconds:D2}";
+                case "default":
+                default:
+                    return $"{hours:D2}:{minutes:D2}:{(int)seconds:D2}";
+            }
         }
     }
 }

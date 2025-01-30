@@ -226,14 +226,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 061a9348dc169c545bd4e5e19dcffaa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dayOfWeek: 0
-  partOfDay: 0
   timeOfDay:
     dayOfWeek: 0
     partOfDay: 0
-    hours: 1
-    minutes: 2
-    seconds: 5
+    hours: 0
+    minutes: 0
+    seconds: 0
+  timeMultiplier: 1800
 --- !u!4 &243524794
 Transform:
   m_ObjectHideFlags: 0

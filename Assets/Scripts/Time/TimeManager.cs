@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,12 +7,9 @@ using GameTime;
 
 public class TimeManager : MonoBehaviour
 {
-    [SerializeField] private DayOfWeek dayOfWeek = DayOfWeek.FIRST_DAY;
-    [SerializeField] private PartOfDay partOfDay = PartOfDay.DAYTIME;
     [SerializeField] private TimeOfDay timeOfDay = new TimeOfDay();
-
-    public DayOfWeek DayOfWeek { get => dayOfWeek; private set => dayOfWeek = value; }
-    public PartOfDay PartOfDay { get => partOfDay; private set => partOfDay = value; }
+    [SerializeField] private float timeMultiplier = 5f;
+    
     public TimeOfDay TimeOfDay { get => timeOfDay; private set => timeOfDay = value; }
     // Start is called before the first frame update
     void Start()
@@ -22,7 +20,12 @@ public class TimeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeOfDay.addTime(Time.deltaTime);
-        Debug.Log(timeOfDay.getTimeAsString());
+        timeOfDay.addTime(Time.deltaTime * timeMultiplier);
+        Debug.Log(timeOfDay.getTimeAsString("dateTime"));
+    }
+
+    private void OnDestroy()
+    {
+        //TODO: this will be where we save.
     }
 }
