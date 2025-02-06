@@ -1372,9 +1372,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 660700792}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dacad76ad2c7d524c9abefb5661db37a, type: 3}
+  m_Script: {fileID: 11500000, guid: b7f8017175f7f3e4a9f33ad12752d11f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  correctRecipe:
+  - Flour
+  - Salt
+  - Pepper
+  - Garlic Powder
 --- !u!1 &776004635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1518,6 +1523,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7f8017175f7f3e4a9f33ad12752d11f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  correctRecipe:
+  - Egg
+  - Water
 --- !u!1 &800598889
 GameObject:
   m_ObjectHideFlags: 0
