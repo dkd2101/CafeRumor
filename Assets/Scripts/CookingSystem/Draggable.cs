@@ -59,10 +59,10 @@ public class Draggable : MonoBehaviour
         Collider2D hitCollider = Physics2D.OverlapPoint(transform.position);
         col.enabled = true;
 
-        if (hitCollider != null && hitCollider.TryGetComponent(out IDroppable droppable))
+        if (hitCollider != null && hitCollider.TryGetComponent(out DropZone dropZone))
         {
             // Handle drop
-            droppable.OnDrop(this);
+            dropZone.OnDrop(this);
         }
         else
         {

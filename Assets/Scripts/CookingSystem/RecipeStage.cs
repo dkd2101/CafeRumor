@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IDroppable
+[System.Serializable]
+public class RecipeStage
 {
-    void OnDrop(Draggable ingredient);
+    public List<string> ingredients;
 }
