@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: 
   dialogue:
-  - This is my dialouge. Hello Man! Look at me.
-  - I like to chew more gum than thee.
-  - Do you like to chew gum?
+  - text: 
+    characterObject: {fileID: 0}
+  - text: 
+    characterObject: {fileID: 0}
+  - text: 
+    characterObject: {fileID: 0}
   responses:
   - responseText: Yes
     dialogueObject: {fileID: 11400000, guid: 81fe820a1d66b334cbd2658cd3cad248, type: 2}

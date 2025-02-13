@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fe7440aa4a0af64396546690742d361, type: 3}
+  m_Name: TestingWithNames
+  m_EditorClassIdentifier: 
+  dialogue:
+  - text: Hi, my name is Thomas, how are you doing today?
+    characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+  - text: Oh, hi. Nice to meet you! My name is Test Character.
+    characterObject: {fileID: 11400000, guid: b95c578ef43f5df4dbbfe1ac4c016dcf, type: 2}
+  - text: Nice to meet you man.
+    characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+  responses: []

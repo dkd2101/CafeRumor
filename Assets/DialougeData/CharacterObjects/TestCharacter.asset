@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fe7440aa4a0af64396546690742d361, type: 3}
-  m_Name: Yes
+  m_Script: {fileID: 11500000, guid: 7994f566afd1e3547988112ea417edf3, type: 3}
+  m_Name: TestCharacter
   m_EditorClassIdentifier: 
-  dialogue:
-  - text: 
-    characterObject: {fileID: 0}
-  responses: []
+  characterName: Character Test

@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class DialogueUI : MonoBehaviour
 {
     [SerializeField] private TMP_Text textLabel;
+    [SerializeField] private TMP_Text nameLabel;
     [SerializeField] private GameObject dialogueBox;
     private TypewriterEffect typewriterEffect;
     
@@ -33,7 +34,10 @@ public class DialogueUI : MonoBehaviour
 
         for (int i = 0; i < dialogueObject.Dialogue.Length; i++)
         {
-            string dialogue = dialogueObject.Dialogue[i];
+            string dialogue = dialogueObject.Dialogue[i].Text;
+            string name = dialogueObject.Dialogue[i].CharacterObject.CharacterName;
+            nameLabel.text = name;
+            //TODO: look into making the character name background the same width as name?
             yield return RunTypingEffect(dialogue);
             
             textLabel.text = dialogue;
