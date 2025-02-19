@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
@@ -14,6 +15,13 @@ public class DialogueUI : MonoBehaviour
     public bool IsOpen { get; private set; }
 
     private ResponseHandler responseHandler;
+    private Dictionary<string, bool> npcConditions;
+
+    public Dictionary<string, bool> NpcConditions
+    {
+        get => npcConditions;
+        set => npcConditions = value;
+    }
 
     private void Start()
     {
@@ -22,8 +30,9 @@ public class DialogueUI : MonoBehaviour
         responseHandler = GetComponent<ResponseHandler>();
     }
 
-    public void ShowDialogue(DialogueObject dialogueObject)
+    public void ShowDialogue(DialogueObject dialogueObject, Dictionary<string, bool> npcCtx = null)
     {
+        npcConditions = npcCtx ?? new Dictionary<string, bool>();
         IsOpen = true;
         dialogueBox.SetActive(true);
         StartCoroutine(StepThroughDialogue(dialogueObject));
@@ -49,8 +58,18 @@ public class DialogueUI : MonoBehaviour
 
             yield return new WaitUntil(() => InputManager.advanceDialogue.triggered);
         }
-        
-        if (dialogueObject.HasResponses)
+
+        if (dialogueObject.HasConditionalBranches)
+        {
+            foreach (var branch in dialogueObject.ConditionalBranches)
+            {
+                if (branch.ConditionsAreTrue(npcConditions))
+                {
+                    ShowDialogue(branch.DialogueObject, npcConditions);
+                    break;
+                }
+            }
+        } else if (dialogueObject.HasResponses)
         {
             responseHandler.ShowResponses(dialogueObject.Responses);
         }

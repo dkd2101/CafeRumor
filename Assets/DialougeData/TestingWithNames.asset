@@ -19,4 +19,13 @@ MonoBehaviour:
     characterObject: {fileID: 11400000, guid: b95c578ef43f5df4dbbfe1ac4c016dcf, type: 2}
   - text: Nice to meet you man.
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+  conditionalBranches:
+  - branchConditions:
+    - key: hasPizza
+      value: 1
+    - key: hasCold
+      value: 0
+    dialogueObject: {fileID: 11400000, guid: 81fe820a1d66b334cbd2658cd3cad248, type: 2}
+  - branchConditions: []
+    dialogueObject: {fileID: 11400000, guid: 3682b5feaef4187468a0c66071def380, type: 2}
   responses: []

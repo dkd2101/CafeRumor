@@ -1,3 +1,4 @@
+using DialogueSystem;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -5,9 +6,14 @@ using UnityEngine.Serialization;
 public class DialogueObject : ScriptableObject
 {
     [SerializeField] private DialogueFrame[] dialogue;
+    [SerializeField] private Branch[] conditionalBranches;
     [SerializeField] private Response[] responses;
     
     public DialogueFrame[] Dialogue => dialogue;
+    
+    public bool HasConditionalBranches => conditionalBranches != null && conditionalBranches.Length > 0;
+    
+    public Branch[] ConditionalBranches => conditionalBranches;
 
     public bool HasResponses => Responses != null && Responses.Length > 0;
     

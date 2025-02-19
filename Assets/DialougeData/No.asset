@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: No
   m_EditorClassIdentifier: 
   dialogue:
-  - Fuck you.
+  - text: I am feeling great :/
+    characterObject: {fileID: 11400000, guid: b95c578ef43f5df4dbbfe1ac4c016dcf, type: 2}
+  conditionalBranches: []
   responses: []

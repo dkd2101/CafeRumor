@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Yes
   m_EditorClassIdentifier: 
   dialogue:
-  - text: 
-    characterObject: {fileID: 0}
+  - text: Yes, I am so happy to have pizza and not a cold!
+    characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+  conditionalBranches: []
   responses: []
