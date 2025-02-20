@@ -10,18 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fe7440aa4a0af64396546690742d361, type: 3}
-  m_Name: Test
+  m_Name: TestingWithNames
   m_EditorClassIdentifier: 
   dialogue:
-  - text: fdsaf
+  - text: Hi, my name is Thomas, how are you doing today?
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
-  - text: ffffff
+  - text: Oh, hi. Nice to meet you! My name is Test Character.
     characterObject: {fileID: 11400000, guid: b95c578ef43f5df4dbbfe1ac4c016dcf, type: 2}
-  - text: dfasfasd
+  - text: Nice to meet you man.
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
-  conditionalBranches: []
-  responses:
-  - responseText: Yes
+  conditionalBranches:
+  - branchConditions:
+    - key: hasPizza
+      value: 1
+    - key: hasCold
+      value: 0
     dialogueObject: {fileID: 11400000, guid: 81fe820a1d66b334cbd2658cd3cad248, type: 2}
-  - responseText: No
+  - branchConditions: []
     dialogueObject: {fileID: 11400000, guid: 3682b5feaef4187468a0c66071def380, type: 2}
+  responses: []
