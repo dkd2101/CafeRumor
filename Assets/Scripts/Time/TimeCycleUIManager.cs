@@ -52,16 +52,17 @@ public class TimeCycleUIManager : MonoBehaviour
     {
         timeManager.PauseTime(true);
         actionMenu.SetActive(true);
-        actionMenu.GetComponent<Fader>().StartFadeIn();
+        if (!actionMenu.GetComponent<Fader>().isVisible)
+            actionMenu.GetComponent<Fader>().StartFadeIn();
     }
 
     // callback function for when the cafe button is clicked
     public void OnCafeClicked()
     {
         Debug.Log("Cafe Selected");
-        timeManager.GoToNextDay();
         fadeImage.SetActive(true);
         fadeImage.GetComponent<Fader>().StartFadeIn();
+        timeManager.GoToNextDay();
 
     }
 
@@ -69,8 +70,8 @@ public class TimeCycleUIManager : MonoBehaviour
     public void OnTownClicked()
     {
         Debug.Log("Town Selected");
-        timeManager.GoToNextDay();
-        fadeImage.SetActive(false);
+        fadeImage.SetActive(true);
         fadeImage.GetComponent<Fader>().StartFadeIn();
+        timeManager.GoToNextDay();
     }
 }
