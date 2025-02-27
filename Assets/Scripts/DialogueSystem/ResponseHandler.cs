@@ -44,7 +44,6 @@ public class ResponseHandler : MonoBehaviour
             Destroy(button);
         }
         tempResponseButtons.Clear();
-        
-        dialogueUI.ShowDialogue(response.DialogueObject);
+        dialogueUI.ShowDialogue(response.DialogueObject, dialogueUI.NpcConditions);
     }
 }

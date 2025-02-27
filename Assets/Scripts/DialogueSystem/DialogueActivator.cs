@@ -32,6 +32,6 @@ public class DialogueActivator : MonoBehaviour, IInteractable
 
     public void Interact(PlayerMovement movement)
     {
-        movement.dialogueUI.ShowDialogue(dialogueObject);
+        movement.dialogueUI.ShowDialogue(dialogueObject, movement.dialogueUI.NpcConditions);
     }
 }

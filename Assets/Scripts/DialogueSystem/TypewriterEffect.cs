@@ -11,10 +11,10 @@ public class TypewriterEffect : MonoBehaviour
     public bool IsRunning { get; private set; }
 
     // used for waiting
-    private readonly Dictionary<HashSet<char>, float> punctuations = new Dictionary<HashSet<char>, float>()
+    private readonly List<Punctuation> punctuations = new List<Punctuation>()
     {
-        { new HashSet<char>() { '.', '!', '?' }, 0.6f },
-        { new HashSet<char>() { ',', ';', ':' }, 0.3f },
+        new Punctuation(new HashSet<char>() { '.', '!', '?' }, 0.6f),
+        new Punctuation(new HashSet<char>() { ',', ';', ':' }, 0.3f),
     };
 
     private Coroutine typingCoroutine;
@@ -36,6 +36,7 @@ public class TypewriterEffect : MonoBehaviour
         float t = 0;
         int charIndex = 0;
         textLabel.text = string.Empty;
+        // TODO: would be nice if we could detect if word is going to wrap and start it from a new line so it doesn't jump.
 
         while (charIndex < textToType.Length)
         {
@@ -65,16 +66,28 @@ public class TypewriterEffect : MonoBehaviour
 
     private bool IsPunctuation(char character, out float waitTime)
     {
-        foreach (KeyValuePair<HashSet<char>, float> punctCat in punctuations)
+        foreach (Punctuation punctCat in punctuations)
         {
-            if (punctCat.Key.Contains(character))
+            if (punctCat.punctuations.Contains(character))
             {
-                waitTime = punctCat.Value;
+                waitTime = punctCat.waitTime;
                 return true;
             }
         }
 
         waitTime = default;
         return false;
+    }
+    
+    private readonly struct Punctuation
+    {
+        public readonly HashSet<char> punctuations;
+        public readonly float waitTime;
+
+        public Punctuation(HashSet<char> punctuations, float waitTime)
+        {
+            this.punctuations = punctuations;
+            this.waitTime = waitTime;
+        }
     }
 }
