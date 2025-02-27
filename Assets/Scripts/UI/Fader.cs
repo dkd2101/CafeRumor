@@ -9,29 +9,40 @@ public class Fader : MonoBehaviour
 
     [SerializeField] private float currentAlpha = 0.0f;
     [SerializeField] private float targetAlpha = 0.0f;
+    [SerializeField] private float fadeSpeed = 1.0f;
     private CanvasGroup canvasGroup;
+    public bool isVisible;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        targetAlpha = currentAlpha;
         canvasGroup = GetComponent<CanvasGroup>();
+        currentAlpha = canvasGroup.alpha;
+        targetAlpha = canvasGroup.alpha;
+        isVisible = canvasGroup.alpha > 0.0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(currentAlpha != targetAlpha) {
-            currentAlpha = Mathf.MoveTowards(currentAlpha, targetAlpha, 1.0f * Time.deltaTime);
-            if(Math.Abs(currentAlpha - targetAlpha) <= 0.01) {
+        if (currentAlpha != targetAlpha)
+        {
+            Debug.Log("Fading");
+            Debug.Log(this.gameObject.name);
+            currentAlpha = Mathf.MoveTowards(currentAlpha, targetAlpha, fadeSpeed * Time.deltaTime);
+            if (Math.Abs(currentAlpha - targetAlpha) <= 0.01)
+            {
                 currentAlpha = targetAlpha;
-            } 
+            }
             canvasGroup.alpha = currentAlpha;
         }
     }
 
     public void StartFadeIn()
     {
+        Debug.Log(this.gameObject.name);
+        isVisible = true;
         targetAlpha = 1.0f;
+        Debug.Log(targetAlpha);
     }
 }
