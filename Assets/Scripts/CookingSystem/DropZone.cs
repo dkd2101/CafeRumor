@@ -12,10 +12,10 @@ public class DropZone : MonoBehaviour
     private Dictionary<string, GameObject> spawnMap = new Dictionary<string, GameObject>();
     private List<string> currentIngredients = new List<string>();
     private int currentStageIndex = 0;
-    private SceneReloader sceneReloader;
     public GameObject recipe;
-    public GameObject popup;
-    
+    private Tooltip tooltip;
+    private Popup popup;
+    private string spawnIngredientName;
     private void Start()
     {
         // Convert list to dictionary for quick lookup
@@ -23,24 +23,25 @@ public class DropZone : MonoBehaviour
         {
             spawnMap[mapping.ingredientName] = mapping.spawnPrefab;
         }
-        sceneReloader = FindObjectOfType<SceneReloader>();
+
+        tooltip = FindObjectOfType<Tooltip>();
+        popup = FindObjectOfType<Popup>();
     }
 
     public void OnDrop(Draggable ingredient)
     {
         Destroy(ingredient.gameObject);
 
-        // Add the dropped ingredient to the current list
-        currentIngredients.Add(ingredient.name);
-        // Spawn a new item if mapped
-        if (spawnMap.ContainsKey(ingredient.name))
+        if (currentStageIndex >= recipeStages.Count)
         {
-            SpawnNewItem(spawnMap[ingredient.name]);
+            popup.ShowErrorPopup();
+            return;
         }
 
-       
-        Debug.Log("trash:" + currentStageIndex);
-        
+
+        // Add the dropped ingredient to the current list
+        currentIngredients.Add(ingredient.name);
+
         if (currentIngredients.Count == recipeStages[currentStageIndex].ingredients.Count)
         {
              CheckRecipeCorrectness();
@@ -51,6 +52,9 @@ public class DropZone : MonoBehaviour
     {
         GameObject newItem = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
         newItem.name = prefab.name;
+        tooltip.ShowTooltip(prefab.name);
+        spawnIngredientName = prefab.name;
+
         // Force-enable Collider if it's disabled
         BoxCollider2D collider = newItem.GetComponent<BoxCollider2D>();
         if (collider != null) collider.enabled = true;
@@ -58,14 +62,18 @@ public class DropZone : MonoBehaviour
         // Force-enable the Draggable script if it's disabled
         Draggable draggable = newItem.GetComponent<Draggable>();
         if (draggable != null) draggable.enabled = true;
-
+ 
         foreach (var entry in spawnMap)
         {
             if (entry.Value.name == recipe.name)
             {
-                Debug.Log("You successfully made the recipe!");
+                Invoke("ShowPopup", 0.5f);
             }
         }
+    }
+    private void ShowPopup()
+    {
+        popup.ShowWinPopup($"You successfully made the {spawnIngredientName} recipe!");
     }
 
     private void CheckRecipeCorrectness()
@@ -75,17 +83,30 @@ public class DropZone : MonoBehaviour
 
         for (int i = 0; i < currentStage.Count; i++)
          {
-             if (currentStage[i] != currentIngredients[i])
-             {
-                 isCorrect = false;
+            
+            if (currentStage[i] != currentIngredients[i])
+            {
+                isCorrect = false;
 
-                 break;
-             }
-         }
+                break;
+            }
+
+            if (i >= currentIngredients.Count)
+            {
+                isCorrect = false;
+                popup.ShowErrorPopup();
+                break;
+            }
+        }
 
         if (isCorrect)
         {
-            Debug.Log($"Stage {currentStageIndex + 1} complete!");
+            string lastIngredient = currentIngredients[currentIngredients.Count - 1];
+            if (spawnMap.ContainsKey(lastIngredient))
+            {
+                SpawnNewItem(spawnMap[lastIngredient]);
+            }
+
             currentIngredients.Clear();
             currentStageIndex++;
 
@@ -98,8 +119,7 @@ public class DropZone : MonoBehaviour
         {
             Debug.Log($"Current ingredients: {string.Join(", ", currentIngredients)}");
             Debug.Log($"Expected ingredients: {string.Join(", ", currentStage)}");
-            popup.SetActive(true);
+            popup.ShowErrorPopup();
         }
     }
-
 }

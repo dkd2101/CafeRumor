@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Draggable : MonoBehaviour
@@ -14,6 +12,7 @@ public class Draggable : MonoBehaviour
     // Dragging state and positions
     private bool isDragging;
     private Vector2 offset, originalPos, startDragPos;
+    private Tooltip tooltip;
 
     private void Start()
     {
@@ -27,6 +26,8 @@ public class Draggable : MonoBehaviour
 
         // Store original position
         originalPos = transform.position;
+
+        tooltip = FindObjectOfType<Tooltip>();
     }
 
     private void Update()
@@ -69,18 +70,21 @@ public class Draggable : MonoBehaviour
             // Return to start position if no drop zone
             transform.position = startDragPos;
         }
+        tooltip.HideTooltip();
     }
 
     private void OnMouseEnter()
     {
         // Change material on hover
         spriteRenderer.material = hoverMaterial;
+        tooltip.ShowTooltip(gameObject.name);
     }
 
     private void OnMouseExit()
     {
         // Revert material on hover exit
         spriteRenderer.material = defaultMaterial;
+        tooltip.HideTooltip();
     }
 
     private Vector2 GetMousePos()
