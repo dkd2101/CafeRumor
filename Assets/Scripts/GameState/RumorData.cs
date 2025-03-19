@@ -29,10 +29,20 @@ namespace GameState
         private string curKey;
 
 
+        public void OnEnable()
+        {
+            this.curKey = rumorCheckpoints[0].key;
+        }
+        
         public bool GetCheckpointStatus(string key)
         {
             var status = rumorCheckpoints.Find(status => status.key.Equals(key));
             return status != null ? status.isCompleted : false;
+        }
+
+        public string GetCurrentDescription() {
+            int index = rumorCheckpoints.FindIndex(checkpoint => checkpoint.key.Equals(curKey));
+            return rumorCheckpoints[index].statusDescription;
         }
 
         public void setCheckpointStatus(string key, bool value)

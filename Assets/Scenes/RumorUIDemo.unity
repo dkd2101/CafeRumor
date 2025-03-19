@@ -316,6 +316,7 @@ GameObject:
   - component: {fileID: 83424612}
   - component: {fileID: 83424614}
   - component: {fileID: 83424613}
+  - component: {fileID: 83424615}
   m_Layer: 5
   m_Name: RumorBackground
   m_TagString: Untagged
@@ -382,6 +383,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83424611}
   m_CullTransparentMesh: 1
+--- !u!114 &83424615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83424611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 673ab0bf424234c0b818b489fd2cb2ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleText: {fileID: 443012293}
+  descriptionText: {fileID: 1201538381}
 --- !u!1 &104492519
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,7 +489,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &243524793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1785,6 +1800,7 @@ GameObject:
   - component: {fileID: 892135543}
   - component: {fileID: 892135545}
   - component: {fileID: 892135544}
+  - component: {fileID: 892135546}
   m_Layer: 5
   m_Name: RumorButton (1)
   m_TagString: Untagged
@@ -1850,6 +1866,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892135542}
   m_CullTransparentMesh: 1
+--- !u!114 &892135546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892135542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1dbaec1ca3f48b09627f60f3702c5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rumorData: {fileID: 11400000, guid: 437066731f168354aac39cc266a9472f, type: 2}
+  hoverColor: {r: 0.33962262, g: 0.33802062, b: 0.33802062, a: 0}
 --- !u!1 &938427624
 GameObject:
   m_ObjectHideFlags: 0
@@ -2220,6 +2250,7 @@ GameObject:
   - component: {fileID: 1389973372}
   - component: {fileID: 1389973374}
   - component: {fileID: 1389973373}
+  - component: {fileID: 1389973375}
   m_Layer: 5
   m_Name: RumorButton
   m_TagString: Untagged
@@ -2285,6 +2316,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389973371}
   m_CullTransparentMesh: 1
+--- !u!114 &1389973375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389973371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1dbaec1ca3f48b09627f60f3702c5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rumorData: {fileID: 11400000, guid: 8aabe84dfcc5c41fb90a41522cbcaa85, type: 2}
+  hoverColor: {r: 0.34117648, g: 0.34117648, b: 0.34117648, a: 0}
 --- !u!1 &1612829835
 GameObject:
   m_ObjectHideFlags: 0

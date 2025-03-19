@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using GameState;
+using TMPro;
 using UnityEngine;
 
 public class RumorMenuScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] TMP_Text titleText;
+    [SerializeField] TMP_Text descriptionText;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void SetDisplayedRumor(RumorData data) {
+        this.titleText.text = data.name;
+        this.descriptionText.text = data.GetCurrentDescription();
     }
 }
