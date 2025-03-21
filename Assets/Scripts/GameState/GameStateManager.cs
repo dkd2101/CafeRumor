@@ -33,7 +33,7 @@ namespace GameState
 
         public bool getRumorData(string rumorName, string key)
         {
-            return gameData.getRumorData(rumorName).getCheckpointStatus(key);
+            return gameData.getRumorData(rumorName).GetCheckpointStatus(key);
         }
 
         public bool isRumorComplete(string rumorName)
