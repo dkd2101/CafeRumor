@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fe7440aa4a0af64396546690742d361, type: 3}
+  m_Name: DOHW-Intro-Dialogue
+  m_EditorClassIdentifier: 
+  dialogue:
+  - text: 'Hi there, welcome to Rumour. What are you in the mood for?
+
+'
+    characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+  - text: 'Hey there, it''s my first time here. I didn''t see a menu so I''m not
+      sure what I can order?
+
+'
+    characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+  - text: "Just tell me whatever you're in the mood for and I\u2019ll make it for
+      you. \r\n"
+    characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+  - text: 'Oh wow! Well, I just came back home to visit. My mom normally makes a
+      LATTE. She uses a NUTTY syrup with an extra hint of SWEETNESS.
+
+'
+    characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+  - text: "Do you think that\u2019s possible to get?\r"
+    characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+  - text: "NUTTY syrup with extra SWEETNESS. Let me see what I can put together.\r"
+    characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+  conditionalBranches: []
+  responses: []
+  endStateChanges:
+  - rumorName: DogOnTheHighway
+    name: intro
+    value: 1

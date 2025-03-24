@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77f6dc67715744cba37b57b98e7ee518, type: 3}
-  m_Name: GameData
+  m_Script: {fileID: 11500000, guid: 5fe7440aa4a0af64396546690742d361, type: 3}
+  m_Name: DOHW-
   m_EditorClassIdentifier: 
-  rumorsData:
-  - {fileID: 11400000, guid: 8aabe84dfcc5c41fb90a41522cbcaa85, type: 2}
+  dialogue: []
+  conditionalBranches: []
+  responses: []
+  endStateChanges: []

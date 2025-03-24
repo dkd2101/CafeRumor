@@ -52,7 +52,7 @@ namespace GameState
             {
                 rumorCheckpoints[index].isCompleted = value;
                 if(!isCompleted())
-                    curKey = rumorCheckpoints[index + 1].key;
+                    curKey = rumorCheckpoints[Mathf.Clamp(index + 1, 0, rumorCheckpoints.Count - 1)].key;
             }
             else // I'm not entirely sure why this else branch is necessarry
             {
@@ -63,6 +63,17 @@ namespace GameState
         public bool isCompleted()
         {
             return rumorCheckpoints.TrueForAll(checkpoint => checkpoint.isCompleted);
+        }
+
+        public Dictionary<string, bool> getCheckpointsAsDictionary()
+        {
+            Dictionary<string, bool> dictionary = new Dictionary<string, bool>();
+            foreach (RumorCheckpoint rumorCheckpoint in rumorCheckpoints)
+            {
+                dictionary.Add(rumorCheckpoint.key, rumorCheckpoint.isCompleted);
+            }
+
+            return dictionary;
         }
 
         public string getRumorName()
