@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -35,13 +36,20 @@ public class Popup : MonoBehaviour
         button.onClick.AddListener(ReloadScene);
     }
 
+    private void LoadOriginalScene()
+    {
+        SceneManager.LoadScene("DogOnHighway");
+    }
+
     public void ShowWinPopup(string text)
     {
+        UnityEngine.Debug.Log("ShowWinPopup was called");
         popupText.text = text;
         popupText.fontSize = 25;
         popupText.rectTransform.sizeDelta = new Vector2(370, 50);
         buttonText.text = "Continue!";
         buttonText.fontSize = 20;
         popup.SetActive(true);
+        button.onClick.AddListener(LoadOriginalScene);
     }
 }

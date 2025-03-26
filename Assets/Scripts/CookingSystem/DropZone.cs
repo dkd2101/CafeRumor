@@ -74,6 +74,7 @@ public class DropZone : MonoBehaviour
     private void ShowPopup()
     {
         popup.ShowWinPopup($"You successfully made the {spawnIngredientName} recipe!");
+        UnityEngine.Debug.Log("Popup Showing");
     }
 
     private void CheckRecipeCorrectness()
@@ -113,6 +114,7 @@ public class DropZone : MonoBehaviour
             if (currentStageIndex >= recipeStages.Count)
             {
                 currentIngredients.Clear();
+                Invoke("ShowPopup", 0.5f);
             }
         }
         else
