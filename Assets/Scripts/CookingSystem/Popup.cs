@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Debug = UnityEngine.Debug;
 
 public class Popup : MonoBehaviour
 {
@@ -43,7 +44,7 @@ public class Popup : MonoBehaviour
 
     public void ShowWinPopup(string text)
     {
-        UnityEngine.Debug.Log("ShowWinPopup was called");
+        button.onClick.RemoveAllListeners();
         popupText.text = text;
         popupText.fontSize = 25;
         popupText.rectTransform.sizeDelta = new Vector2(370, 50);
