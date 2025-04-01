@@ -17,16 +17,20 @@ MonoBehaviour:
   - branchConditions:
     - key: intro
       value: 0
+    requiredItems: []
     dialogueObject: {fileID: 11400000, guid: 79f9bba847d764544b2ac77b41f1ee1d, type: 2}
   - branchConditions:
     - key: intro
       value: 1
+    requiredItems: []
     dialogueObject: {fileID: 11400000, guid: 3682b5feaef4187468a0c66071def380, type: 2}
   - branchConditions:
     - key: intro
       value: 1
     - key: intro
       value: 1
+    requiredItems:
+    - {fileID: 11400000, guid: d67e7924779118747b16ff5f6445d988, type: 2}
     dialogueObject: {fileID: 11400000, guid: 3682b5feaef4187468a0c66071def380, type: 2}
   responses: []
   endStateChanges: []

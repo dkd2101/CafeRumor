@@ -93,6 +93,11 @@ public class InventorySystem : MonoBehaviour
     {
         return inventoryItems.Exists(i => i.itemName.Equals(itemName, StringComparison.OrdinalIgnoreCase) && i.quantity > 0);
     }
+    
+    public bool HasItem(Item item)
+    {
+        return inventoryItems.Contains(item);
+    }
 
     public void RemoveItem(string itemName)
     {
