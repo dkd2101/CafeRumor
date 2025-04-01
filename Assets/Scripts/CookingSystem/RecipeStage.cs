@@ -6,4 +6,5 @@ using UnityEngine;
 public class RecipeStage
 {
     public List<string> ingredients;
+   
 }

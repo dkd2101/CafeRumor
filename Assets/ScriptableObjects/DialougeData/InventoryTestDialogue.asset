@@ -26,4 +26,8 @@ MonoBehaviour:
     - key: Burger
       value: 0
     dialogueObject: {fileID: 11400000, guid: 6960157bb5b3f2342afd6b090c904613, type: 2}
+  - branchConditions:
+    - key: Burger
+      value: 0
+    dialogueObject: {fileID: 0}
   responses: []

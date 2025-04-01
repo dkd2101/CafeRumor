@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: GameData
   m_EditorClassIdentifier: 
   rumorsData:
-  - {fileID: 11400000, guid: 437066731f168354aac39cc266a9472f, type: 2}
+  - {fileID: 11400000, guid: 8aabe84dfcc5c41fb90a41522cbcaa85, type: 2}

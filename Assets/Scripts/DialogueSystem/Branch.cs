@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace DialogueSystem
 {
@@ -16,11 +17,14 @@ namespace DialogueSystem
     {
         // I wanted this to be a Dictionary (Hashmap) but that doesn't show up in the inspector
         [SerializeField] private List<ConditionPair> branchConditions = new List<ConditionPair>();
+        [SerializeField] private List<Item> requiredItems;
         [SerializeField] private DialogueObject dialogueObject;
 
         public Dictionary<string, bool> BranchConditions => branchConditions.ToDictionary(c => c.key, c => c.value);
 
         public DialogueObject DialogueObject => dialogueObject;
+
+        public List<Item> RequiredItems => requiredItems;
 
         public bool ConditionsAreTrue(Dictionary<string, bool> receivedConditions)
         {
@@ -29,9 +33,18 @@ namespace DialogueSystem
                 Debug.LogWarning("Switched to a new branch without any branch (name =" + dialogueObject.name + ") conditions.");
                 return true;
             }
-            return branchConditions.All(condition =>
+
+            bool branchChecks = branchConditions.All(condition =>
                 receivedConditions.TryGetValue(condition.key, out bool value) && value == condition.value
             );
+
+            bool correctItems = true;
+            if (requiredItems.Count > 0)
+            {
+                correctItems = requiredItems.TrueForAll(item => InventorySystem.Instance.HasItem(item));
+            }
+
+            return branchChecks && correctItems;
         }
     }
 }

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace GameState
@@ -33,7 +34,12 @@ namespace GameState
 
         public bool getRumorData(string rumorName, string key)
         {
-            return gameData.getRumorData(rumorName).getCheckpointStatus(key);
+            return gameData.getRumorData(rumorName).GetCheckpointStatus(key);
+        }
+
+        public Dictionary<string, bool> getRumorDataAsDictionary(string rumorName)
+        {
+            return gameData.getRumorData(rumorName).getCheckpointsAsDictionary();
         }
 
         public bool isRumorComplete(string rumorName)

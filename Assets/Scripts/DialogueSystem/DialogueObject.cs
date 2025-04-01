@@ -1,6 +1,5 @@
 using DialogueSystem;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 [CreateAssetMenu(menuName = "Dialogue/DialogueObject")]
 public class DialogueObject : ScriptableObject
@@ -8,6 +7,7 @@ public class DialogueObject : ScriptableObject
     [SerializeField] private DialogueFrame[] dialogue;
     [SerializeField] private Branch[] conditionalBranches;
     [SerializeField] private Response[] responses;
+    [SerializeField] private EndStateChanges[] endStateChanges;
     
     public DialogueFrame[] Dialogue => dialogue;
     
@@ -18,7 +18,9 @@ public class DialogueObject : ScriptableObject
     public bool HasResponses => Responses != null && Responses.Length > 0;
     
     public Response[] Responses => responses;
-    
+
+    public EndStateChanges[] EndStateChanges => endStateChanges;
+
 }
 
 [System.Serializable]
@@ -29,4 +31,15 @@ public class DialogueFrame
 
     public string Text => text;
     public CharacterObject CharacterObject => characterObject;
+}
+
+[System.Serializable]
+public class EndStateChanges
+{
+    [SerializeField] private string rumorName;
+    [SerializeField] private string name;
+    [SerializeField] private bool value;
+    public string RumorName => rumorName;
+    public string Name => name;
+    public bool Value => value;
 }

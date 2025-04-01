@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using GameState;
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
@@ -76,6 +77,7 @@ public class DialogueUI : MonoBehaviour
         else
         {
             CloseDialogueBox();
+            TriggerStateChanges(dialogueObject);
         }
     }
 
@@ -99,5 +101,20 @@ public class DialogueUI : MonoBehaviour
         IsOpen = false;
         dialogueBox.SetActive(false);
         textLabel.text = string.Empty;
+    }
+
+    private static void TriggerStateChanges(DialogueObject dialogueObject)
+    {
+        foreach (var change in dialogueObject.EndStateChanges)
+        {
+            try
+            {
+                GameStateManager.getInstance().setRumorData(change.RumorName, change.Name, change.Value);
+            }
+            catch (Exception e)
+            {
+                Debug.Log("Failed " + e.Message);
+            }
+        }
     }
 }

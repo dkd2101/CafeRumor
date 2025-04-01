@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c821173006f541a7be8363037e774a23, type: 3}
   m_Name: TestRumorData
   m_EditorClassIdentifier: 
+  rumorName: TestRumor
   rumorCheckpoints:
   - key: Checkpoint1
-    value: 1
-  rumorName: TestRumor
+    isCompleted: 0
+    statusDescription: This is filler description text for this rummor

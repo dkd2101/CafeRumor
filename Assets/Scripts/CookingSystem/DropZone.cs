@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class DropZone : MonoBehaviour
 {
@@ -13,6 +16,7 @@ public class DropZone : MonoBehaviour
     private List<string> currentIngredients = new List<string>();
     private int currentStageIndex = 0;
     public GameObject recipe;
+    public List<GameObject> recipes = new List<GameObject>();
     private Tooltip tooltip;
     private Popup popup;
     private string spawnIngredientName;
@@ -28,6 +32,7 @@ public class DropZone : MonoBehaviour
         popup = FindObjectOfType<Popup>();
     }
 
+    
     public void OnDrop(Draggable ingredient)
     {
         Destroy(ingredient.gameObject);
@@ -38,16 +43,17 @@ public class DropZone : MonoBehaviour
             return;
         }
 
-
         // Add the dropped ingredient to the current list
         currentIngredients.Add(ingredient.name);
 
         if (currentIngredients.Count == recipeStages[currentStageIndex].ingredients.Count)
         {
-             CheckRecipeCorrectness();
+            CheckRecipeCorrectness();
         }
     }
 
+    
+    
     private void SpawnNewItem(GameObject prefab)
     {
         GameObject newItem = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
@@ -62,32 +68,29 @@ public class DropZone : MonoBehaviour
         // Force-enable the Draggable script if it's disabled
         Draggable draggable = newItem.GetComponent<Draggable>();
         if (draggable != null) draggable.enabled = true;
- 
-        foreach (var entry in spawnMap)
-        {
-            if (entry.Value.name == recipe.name)
-            {
-                Invoke("ShowPopup", 0.5f);
-            }
-        }
-    }
-    private void ShowPopup()
-    {
-        popup.ShowWinPopup($"You successfully made the {spawnIngredientName} recipe!");
+        
+        // this one works
+         foreach (var entry in spawnMap)
+         {
+             if (entry.Value.name == recipe.name)
+             {
+                 popup.ShowWinPopup($"You successfully made the {spawnIngredientName} recipe!");
+             }
+         }
     }
 
+    
     private void CheckRecipeCorrectness()
     {
         List<string> currentStage = recipeStages[currentStageIndex].ingredients;
         bool isCorrect = true;
-
+        
         for (int i = 0; i < currentStage.Count; i++)
-         {
+        {
             
             if (currentStage[i] != currentIngredients[i])
             {
                 isCorrect = false;
-
                 break;
             }
 
@@ -110,10 +113,6 @@ public class DropZone : MonoBehaviour
             currentIngredients.Clear();
             currentStageIndex++;
 
-            if (currentStageIndex >= recipeStages.Count)
-            {
-                currentIngredients.Clear();
-            }
         }
         else
         {
