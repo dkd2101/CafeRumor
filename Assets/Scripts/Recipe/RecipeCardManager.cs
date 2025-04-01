@@ -10,6 +10,7 @@ public class RecipeCardManager : MonoBehaviour
     [SerializeField] private GameObject cardZone;
     [SerializeField] private float offsetPlacement = 150;
     [SerializeField] private List<RecipeSO> collectedRecipes;
+    [SerializeField] private GameObject fadeImage;
 
     // instantiates all of the recipe cards in a row
     void Start()
@@ -24,6 +25,9 @@ public class RecipeCardManager : MonoBehaviour
             GameObject recipeCard = Instantiate(recipeCardPrefab, cardZone.transform);
             recipeCard.GetComponent<RectTransform>().anchoredPosition = new Vector2(cardZone.GetComponent<RectTransform>().anchoredPosition.x + xPos, cardZone.GetComponent<RectTransform>().anchoredPosition.y);
             recipeCard.GetComponent<CardBehavior>().SetRecipeTitle(collectedRecipes[i].name);
+            CardBehavior recipeCardBehavior = recipeCard.GetComponent<CardBehavior>();
+            recipeCardBehavior.SetRecipeData(collectedRecipes[i]);
+            recipeCardBehavior.SetFadeImage(fadeImage);
             xPos += offsetPlacement;
         }
     }
