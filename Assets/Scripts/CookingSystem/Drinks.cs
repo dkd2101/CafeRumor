@@ -25,20 +25,6 @@ public class Drinks : MonoBehaviour
     {
         ingredientList.Add(ingredient.name);
         ingredientList.Sort();
-        if(ingredientList.Contains("Milk") && ingredientList.Contains("Espresso"))
-        {
-            ingredientList.Remove("Milk");
-            ingredientList.Remove("Espresso");
-            ingredientList.Add("Latte");
-          
-        }
-        if (ingredientList.Contains("Latte"))
-        {
-            ingredientList.Remove("Latte"); 
-            ingredientList.Add("Latte"); 
-        }
-        drinkIngredients = string.Join(" ", ingredientList);
-        Debug.Log(drinkIngredients);
         Destroy(ingredient.gameObject);
     }
 
@@ -49,10 +35,30 @@ public class Drinks : MonoBehaviour
 
     private void AddInventory()
     {
+        bool hasEspresso = ingredientList.Contains("Espresso");
+        bool hasMilk = ingredientList.Contains("Milk");
+
+        if (hasEspresso && hasMilk)
+        {
+            ingredientList.Remove("Espresso");
+            ingredientList.Remove("Milk");
+            ingredientList.Add("Latte");
+        }
+        else if (hasEspresso)
+        {
+            ingredientList.Remove("Espresso");
+            ingredientList.Add("Coffee"); 
+        }
+
+        drinkIngredients = string.Join(" ", ingredientList);
+
         Item newDrink = ScriptableObject.CreateInstance<Item>();
         newDrink.itemName = drinkIngredients;
         newDrink.quantity = 1;
         InventorySystem.Instance.AddItem(newDrink);
-        SceneManager.LoadScene("DogOnHighway");
+        FindObjectOfType<Popup>().ShowWinPopup($"You made {drinkIngredients}!");
+        
     }
+
+  
 }

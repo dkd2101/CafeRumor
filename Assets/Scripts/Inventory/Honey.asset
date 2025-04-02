@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Honey
   description: Honey
-  quantity: 0
+  quantity: 1
