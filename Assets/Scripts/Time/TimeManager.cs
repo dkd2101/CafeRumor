@@ -72,7 +72,7 @@ public class TimeManager : MonoBehaviour
         pauseTime = isPaused;
     }
 
-    void ResetLoop()
+    private void ResetLoop()
     {
         this.timeOfDay.setTime(GameTime.DayOfWeek.FIRST_DAY, 8, 0, 0);
     }

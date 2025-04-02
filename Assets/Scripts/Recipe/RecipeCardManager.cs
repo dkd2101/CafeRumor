@@ -7,6 +7,7 @@ public class RecipeCardManager : MonoBehaviour
 {
 
     [SerializeField] private GameObject recipeCardPrefab;
+    [SerializeField] private GameObject selectionMenu;
     [SerializeField] private GameObject cardZone;
     [SerializeField] private float offsetPlacement = 150;
     [SerializeField] private List<RecipeSO> collectedRecipes;
@@ -30,6 +31,9 @@ public class RecipeCardManager : MonoBehaviour
             recipeCardBehavior.SetFadeImage(fadeImage);
             xPos += offsetPlacement;
         }
+
+        selectionMenu.SetActive(false);
+
     }
 
     public void AddRecipe(RecipeSO recipe) {

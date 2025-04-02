@@ -12,7 +12,7 @@ public class Item : ScriptableObject
     {
         if (other is Item otherItem)
         {
-            return itemName == otherItem.itemName && description == otherItem.description;
+            return itemName == otherItem.itemName;
         }
         return false;
     }
