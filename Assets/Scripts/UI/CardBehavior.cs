@@ -18,7 +18,7 @@ public class CardBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     private RecipeSO recipe;
 
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         rectTransform = GetComponent<RectTransform>();
         startingYPos = rectTransform.anchoredPosition.y;
@@ -43,7 +43,9 @@ public class CardBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public void OnPointerEnter(PointerEventData eventData)
     {
         Debug.Log("pointer enter");
+        Debug.Log(startingYPos);
         targetYPos = startingYPos + yOffset;
+        Debug.Log(targetYPos);
     }
 
     public void OnPointerExit(PointerEventData eventData)
