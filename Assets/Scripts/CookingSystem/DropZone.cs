@@ -16,8 +16,6 @@ public class DropZone : MonoBehaviour
     private List<string> currentIngredients = new List<string>();
     private int currentStageIndex = 0;
     public GameObject recipe;
-    public List<GameObject> recipes = new List<GameObject>();
-    private Tooltip tooltip;
     private Popup popup;
     private string spawnIngredientName;
     private void Start()
@@ -28,7 +26,6 @@ public class DropZone : MonoBehaviour
             spawnMap[mapping.ingredientName] = mapping.spawnPrefab;
         }
 
-        tooltip = FindObjectOfType<Tooltip>();
         popup = FindObjectOfType<Popup>();
     }
 
@@ -53,12 +50,10 @@ public class DropZone : MonoBehaviour
     }
 
     
-    
     private void SpawnNewItem(GameObject prefab)
     {
         GameObject newItem = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
         newItem.name = prefab.name;
-        tooltip.ShowTooltip(prefab.name);
         spawnIngredientName = prefab.name;
 
         // Force-enable Collider if it's disabled

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Shoyu Pork
   m_EditorClassIdentifier: 
   itemName: Shoyu Pork
-  description: A tasty dish.
+  description: A tasty dish
   quantity: 1

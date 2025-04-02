@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Hazelnut Latte
   description: A latte with hazelnut
-  quantity: 0
+  quantity: 1

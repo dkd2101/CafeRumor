@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Tooltip
   - Popup
+  - Espresso Pod
   layers:
   - Default
   - TransparentFX

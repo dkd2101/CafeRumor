@@ -62,8 +62,15 @@ public class Draggable : MonoBehaviour
 
         if (hitCollider != null && hitCollider.TryGetComponent(out DropZone dropZone))
         {
-            // Handle drop
             dropZone.OnDrop(this);
+        }
+        else if (hitCollider != null && hitCollider.TryGetComponent(out Drinks drinks))
+        {
+            drinks.OnDrop(this);
+        }
+        else if (hitCollider.TryGetComponent(out EspressoMachine espressoMachine))
+        {
+            espressoMachine.OnTriggerEnter2D(col);
         }
         else
         {
