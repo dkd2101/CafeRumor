@@ -3469,6 +3469,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionPanel: {fileID: 124635805}
+  interactedWith:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &1726627259
 SpriteRenderer:
   m_ObjectHideFlags: 0
