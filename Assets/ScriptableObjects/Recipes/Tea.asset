@@ -15,4 +15,4 @@ MonoBehaviour:
   dishName: Tea
   ingredients: []
   instructions: []
-  cookingSceneName: Tea
+  cookingSceneName: Drink

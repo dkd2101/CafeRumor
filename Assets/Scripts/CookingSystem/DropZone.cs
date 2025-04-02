@@ -69,12 +69,16 @@ public class DropZone : MonoBehaviour
          {
              if (entry.Value.name == recipe.name)
              {
-                 popup.ShowWinPopup($"You successfully made the {spawnIngredientName} recipe!");
-             }
+                Invoke("ShowWinPopup", 1f);
+            }
          }
     }
 
-    
+    private void ShowWinPopup()
+    {
+        popup.ShowWinPopup($"You successfully made the {spawnIngredientName} recipe!");
+    }
+
     private void CheckRecipeCorrectness()
     {
         List<string> currentStage = recipeStages[currentStageIndex].ingredients;

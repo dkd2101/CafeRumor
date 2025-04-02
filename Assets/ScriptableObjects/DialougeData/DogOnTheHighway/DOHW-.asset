@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: DOHW-
   m_EditorClassIdentifier: 
   dialogue: []
-  conditionalBranches: []
+  conditionalBranches:
+  - branchConditions: []
+    requiredItems: []
+    dialogueObject: {fileID: 0}
   responses: []
   endStateChanges: []

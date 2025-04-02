@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61759b5f7519e43a486ac40fb0e502b8, type: 3}
-  m_Name: Latte
+  m_Name: SpamMusubi
   m_EditorClassIdentifier: 
-  dishName: Coffee
+  dishName: 
   ingredients: []
   instructions: []
-  cookingSceneName: Drink
+  cookingSceneName: 
