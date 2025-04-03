@@ -8,6 +8,7 @@ public class DialogueObject : ScriptableObject
     [SerializeField] private Branch[] conditionalBranches;
     [SerializeField] private Response[] responses;
     [SerializeField] private EndStateChanges[] endStateChanges;
+    [SerializeField] private RecipeSO[] recipiesToAdd;
     
     public DialogueFrame[] Dialogue => dialogue;
     
@@ -20,7 +21,8 @@ public class DialogueObject : ScriptableObject
     public Response[] Responses => responses;
 
     public EndStateChanges[] EndStateChanges => endStateChanges;
-
+    
+    public RecipeSO[] RecipiesToAdd => recipiesToAdd;
 }
 
 [System.Serializable]
