@@ -23,9 +23,14 @@ public class Drinks : MonoBehaviour
 
     public void OnDrop(Draggable ingredient)
     {
+        ingredient.StartInBetweens();
         ingredientList.Add(ingredient.name);
         ingredientList.Sort();
         Destroy(ingredient.gameObject);
+    }
+
+    public void AddEspresso() {
+        ingredientList.Add("Espresso Pod");
     }
 
     private void ReloadScene()

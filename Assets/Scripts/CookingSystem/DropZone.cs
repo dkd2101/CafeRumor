@@ -32,6 +32,8 @@ public class DropZone : MonoBehaviour
     
     public void OnDrop(Draggable ingredient)
     {
+        ingredient.StartInBetweens();
+        
         Destroy(ingredient.gameObject);
 
         if (currentStageIndex >= recipeStages.Count)

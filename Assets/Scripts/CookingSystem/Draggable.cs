@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Draggable : MonoBehaviour
@@ -13,6 +15,8 @@ public class Draggable : MonoBehaviour
     private bool isDragging;
     private Vector2 offset, originalPos, startDragPos;
     private Tooltip tooltip;
+
+    public List<GameObject> inBetweens;
 
     private void Start()
     {
@@ -98,5 +102,10 @@ public class Draggable : MonoBehaviour
     {
         // Get mouse position in world coordinates
         return Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    }
+
+    public void StartInBetweens() {
+        StartCoroutine("PlayInBetweens");
+        FindObjectOfType<InBetweenManager>().StartInBetweens(this.inBetweens);
     }
 }
