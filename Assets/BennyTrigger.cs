@@ -23,8 +23,8 @@ public class BennyTrigger : MonoBehaviour
     {
         if (!child.activeSelf && other.CompareTag("Player"))
         {
-            if (!GameStateManager.getInstance().isRumorComplete("DogOnTheHighway")
-                && GameStateManager.getInstance().getRumorData("DogOnTheHighway", "Benny")
+            if (!GameStateManager.getInstance().isRumorComplete("Dog on the Highway")
+                && GameStateManager.getInstance().getRumorData("Dog on the Highway", "Benny")
                 && InventorySystem.Instance.HasItem(pork)
                 // Time? I want to make it a singleton so it is not ass to access.
                 )
