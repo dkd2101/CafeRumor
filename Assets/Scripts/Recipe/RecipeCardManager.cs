@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RecipeCardManager : MonoBehaviour
 {
@@ -16,6 +17,11 @@ public class RecipeCardManager : MonoBehaviour
     // instantiates all of the recipe cards in a row
     void Start()
     {
+        if (collectedRecipes == null || collectedRecipes.Count == 0)
+        {
+            collectedRecipes = InventorySystem.Instance.GetCollectedRecipes();
+        }
+
         // get the anchor point of the card zone
         float xPos = cardZone.GetComponent<RectTransform>().anchoredPosition.x;
 
@@ -24,11 +30,13 @@ public class RecipeCardManager : MonoBehaviour
         for (int i = 0; i < collectedRecipes.Count; i++)
         {
             GameObject recipeCard = Instantiate(recipeCardPrefab, cardZone.transform);
-            recipeCard.GetComponent<RectTransform>().anchoredPosition = new Vector2(cardZone.GetComponent<RectTransform>().anchoredPosition.x + xPos, cardZone.GetComponent<RectTransform>().anchoredPosition.y);
-            recipeCard.GetComponent<CardBehavior>().SetRecipeTitle(collectedRecipes[i].name);
+            recipeCard.GetComponent<RectTransform>().anchoredPosition = new Vector2(xPos, cardZone.GetComponent<RectTransform>().anchoredPosition.y);
+
             CardBehavior recipeCardBehavior = recipeCard.GetComponent<CardBehavior>();
+            recipeCardBehavior.SetRecipeTitle(collectedRecipes[i].name);
             recipeCardBehavior.SetRecipeData(collectedRecipes[i]);
             recipeCardBehavior.SetFadeImage(fadeImage);
+
             xPos += offsetPlacement;
         }
 
@@ -36,7 +44,25 @@ public class RecipeCardManager : MonoBehaviour
 
     }
 
-    public void AddRecipe(RecipeSO recipe) {
+    void Update()
+    {
+        collectedRecipes = InventorySystem.Instance.GetCollectedRecipes();
+    }
+
+    public void AddRecipe(RecipeSO recipe)
+    {
+        if (collectedRecipes.Contains(recipe)) return;
+
         collectedRecipes.Add(recipe);
+
+        float xPos = offsetPlacement * (collectedRecipes.Count - 1);
+
+        GameObject recipeCard = Instantiate(recipeCardPrefab, cardZone.transform);
+        recipeCard.GetComponent<RectTransform>().anchoredPosition = new Vector2(xPos, cardZone.GetComponent<RectTransform>().anchoredPosition.y);
+
+        CardBehavior recipeCardBehavior = recipeCard.GetComponent<CardBehavior>();
+        recipeCardBehavior.SetRecipeTitle(recipe.name);
+        recipeCardBehavior.SetRecipeData(recipe);
+        recipeCardBehavior.SetFadeImage(fadeImage);
     }
 }

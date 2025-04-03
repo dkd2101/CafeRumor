@@ -12,10 +12,14 @@ public class InventorySystem : MonoBehaviour
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private Transform itemButtonContainer;
     [SerializeField] private GameObject itemButtonPrefab;
+    [SerializeField] private RecipeSO coffee;
 
     private List<Item> inventoryItems = new List<Item>();
+    private List<RecipeSO> recipesInventory = new List<RecipeSO>();
     private Action<Item> onItemSelected;
     private bool isInventoryOpen = false;
+
+    public List<RecipeSO> GetCollectedRecipes() => recipesInventory;
 
     private void Awake()
     {
@@ -48,6 +52,8 @@ public class InventorySystem : MonoBehaviour
         }
 
         inventoryPanel.SetActive(false);
+
+        recipesInventory.Add(coffee);
     }
 
     private void Update()
@@ -134,6 +140,28 @@ public class InventorySystem : MonoBehaviour
         }
     }
 
+    public void RemoveItem(Item item)
+    {
+        var inventoryItem = inventoryItems.Find(i => i.itemName.Equals(item.itemName, StringComparison.OrdinalIgnoreCase));
+
+        if (inventoryItem != null)
+        {
+            inventoryItem.quantity--;
+
+            if (inventoryItem.quantity <= 0)
+            {
+                inventoryItems.Remove(inventoryItem);
+            }
+        }
+
+        if (isInventoryOpen)
+        {
+            PopulateInventory();
+        }
+    }
+
+
+
     public void OpenInventory(Action<Item> onItemSelectedCallback)
     {
         isInventoryOpen = true;
@@ -202,6 +230,21 @@ public class InventorySystem : MonoBehaviour
         foreach (var item in inventoryItems)
         {
             UnityEngine.Debug.Log($"{item.itemName}: {item.quantity}");
+        }
+    }
+
+    public void AddRecipe(RecipeSO recipe)
+    {
+        if (!recipesInventory.Contains(recipe))
+        {
+            recipesInventory.Add(recipe);
+            UnityEngine.Debug.Log($"Added Recipe: {recipe.name}");
+
+            RecipeCardManager recipeCardManager = FindObjectOfType<RecipeCardManager>();
+            if (recipeCardManager != null)
+            {
+                recipeCardManager.AddRecipe(recipe);
+            }
         }
     }
 }

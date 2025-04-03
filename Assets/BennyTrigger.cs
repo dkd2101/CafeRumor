@@ -14,7 +14,7 @@ public class BennyTrigger : MonoBehaviour
     {
         child = transform.GetChild(0).gameObject;
         child.SetActive(false);
-        
+
         // Comment out later if we have a non dumb way to get pork
         InventorySystem.Instance.AddItem(pork);
     }
@@ -30,7 +30,7 @@ public class BennyTrigger : MonoBehaviour
                 )
             {
                 child.SetActive(true);
-                InventorySystem.Instance.RemoveItem("Pork");
+                // InventorySystem.Instance.RemoveItem("Pork");
             }
         }
     }

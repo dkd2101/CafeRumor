@@ -11,7 +11,6 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] private TMP_Text textLabel;
     [SerializeField] private TMP_Text nameLabel;
     [SerializeField] private GameObject dialogueBox;
-    [SerializeField] private RecipeCardManager recipeCardManager;
     private TypewriterEffect typewriterEffect;
     
     public bool IsOpen { get; private set; }
@@ -122,23 +121,16 @@ public class DialogueUI : MonoBehaviour
 
     private void AddNewRecipies(DialogueObject dialogueObject)
     {
-        if (recipeCardManager != null)
+        foreach (var r in dialogueObject.RecipiesToAdd)
         {
-            foreach (var r in dialogueObject.RecipiesToAdd)
-            {
-                try
+            try
                 {
-                    recipeCardManager.AddRecipe(r);
+                    InventorySystem.Instance.AddRecipe(r);
                 }
                 catch (Exception e)
                 {
                     Debug.Log("Failed " + e.Message);
                 }
             }
-        }
-        else
-        {
-            Debug.Log("No Recipe UI Found. Make sure RecipeCardManager is set in inspector.");
-        }
     }
 }

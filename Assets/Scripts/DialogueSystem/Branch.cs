@@ -42,6 +42,10 @@ namespace DialogueSystem
             if (requiredItems.Count > 0)
             {
                 correctItems = requiredItems.TrueForAll(item => InventorySystem.Instance.HasItem(item));
+                foreach (var item in requiredItems)
+                {
+                    InventorySystem.Instance.RemoveItem(item);
+                }
             }
 
             return branchChecks && correctItems;
