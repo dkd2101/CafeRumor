@@ -38,5 +38,5 @@ MonoBehaviour:
   responses: []
   endStateChanges:
   - rumorName: DogOnTheHighway
-    name: intro
+    name: RumorIntro
     value: 1

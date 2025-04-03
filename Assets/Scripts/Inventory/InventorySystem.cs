@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.Diagnostics;
 
 public class InventorySystem : MonoBehaviour
 {
@@ -30,6 +31,22 @@ public class InventorySystem : MonoBehaviour
 
     private void Start()
     {
+        inventoryPanel = GameObject.Find("InventoryPanel");
+
+        if (inventoryPanel != null)
+        {
+            itemButtonContainer = inventoryPanel.transform.Find("ButtonContainer");
+
+            if (itemButtonContainer == null)
+            {
+                UnityEngine.Debug.LogWarning("ButtonContainer not found under InventoryPanel.");
+            }
+        }
+        else
+        {
+            UnityEngine.Debug.LogWarning("InventoryPanel not found in the scene.");
+        }
+
         inventoryPanel.SetActive(false);
     }
 

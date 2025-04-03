@@ -14,16 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: []
   conditionalBranches:
-  - branchConditions:
-    - key: intro
-      value: 1
+  - branchConditions: []
     requiredItems: []
     dialogueObject: {fileID: 11400000, guid: 79f9bba847d764544b2ac77b41f1ee1d, type: 2}
-  - branchConditions: []
-    requiredItems: []
-    dialogueObject: {fileID: 11400000, guid: 3682b5feaef4187468a0c66071def380, type: 2}
-  - branchConditions: []
-    requiredItems: []
+  - branchConditions:
+    - key: RumorIntro
+      value: 1
+    requiredItems:
+    - {fileID: 11400000, guid: 5064da1fe374fa44e91dc693fd3a444c, type: 2}
     dialogueObject: {fileID: 11400000, guid: 3682b5feaef4187468a0c66071def380, type: 2}
   responses: []
   endStateChanges: []

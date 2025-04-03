@@ -28,7 +28,7 @@ namespace DialogueSystem
 
         public bool ConditionsAreTrue(Dictionary<string, bool> receivedConditions)
         {
-            if (branchConditions.Count == 0)
+            if (branchConditions.Count == 0 && requiredItems.Count == 0)
             {
                 Debug.LogWarning("Switched to a new branch without any branch (name =" + dialogueObject.name + ") conditions.");
                 return true;

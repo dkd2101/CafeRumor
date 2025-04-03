@@ -35,18 +35,18 @@ public class Drinks : MonoBehaviour
 
     private void AddInventory()
     {
-        bool hasEspresso = ingredientList.Contains("Espresso");
+        bool hasEspresso = ingredientList.Contains("Espresso Pod");
         bool hasMilk = ingredientList.Contains("Milk");
 
         if (hasEspresso && hasMilk)
         {
-            ingredientList.Remove("Espresso");
+            ingredientList.Remove("Espresso Pod");
             ingredientList.Remove("Milk");
             ingredientList.Add("Latte");
         }
         else if (hasEspresso)
         {
-            ingredientList.Remove("Espresso");
+            ingredientList.Remove("Espresso Pod");
             ingredientList.Add("Coffee"); 
         }
 
@@ -56,7 +56,7 @@ public class Drinks : MonoBehaviour
         newDrink.itemName = drinkIngredients;
         newDrink.quantity = 1;
         InventorySystem.Instance.AddItem(newDrink);
-        FindObjectOfType<Popup>().ShowWinPopup($"You made {drinkIngredients}!");
+        FindObjectOfType<Popup>().ShowWinPopup($"You made a {drinkIngredients}!");
         
     }
 
