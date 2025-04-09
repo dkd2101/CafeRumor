@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fe7440aa4a0af64396546690742d361, type: 3}
+  m_Name: DOHW-Parent
+  m_EditorClassIdentifier: 
+  dialogue: []
+  conditionalBranches:
+  - branchConditions:
+    - key: NoIntro
+      value: 1
+    requiredItems: []
+    dialogueObject: {fileID: 11400000, guid: 79f9bba847d764544b2ac77b41f1ee1d, type: 2}
+  - branchConditions:
+    - key: RumorIntro
+      value: 1
+    requiredItems:
+    - {fileID: 11400000, guid: a1534695e436aa14290cb04c91852a8b, type: 2}
+    dialogueObject: {fileID: 11400000, guid: 84c17cd997f7c43b792e211e32986a6f, type: 2}
+  - branchConditions:
+    - key: Default1
+      value: 1
+    requiredItems: []
+    dialogueObject: {fileID: 11400000, guid: 40983dffe17046b448c1ea0b8985b2d9, type: 2}
+  - branchConditions:
+    - key: RumorIntro
+      value: 1
+    requiredItems:
+    - {fileID: 11400000, guid: 78f719b952442694883870f1a61786d5, type: 2}
+    dialogueObject: {fileID: 11400000, guid: 40983dffe17046b448c1ea0b8985b2d9, type: 2}
+  - branchConditions:
+    - key: RumorIntro
+      value: 1
+    requiredItems:
+    - {fileID: 11400000, guid: a1449a7a2edf93d45b947fe8c693e800, type: 2}
+    dialogueObject: {fileID: 11400000, guid: 40983dffe17046b448c1ea0b8985b2d9, type: 2}
+  - branchConditions:
+    - key: TalkedToBenny
+      value: 1
+    requiredItems:
+    - {fileID: 11400000, guid: a8cc5238f02f387489580d324c663761, type: 2}
+    dialogueObject: {fileID: 11400000, guid: b3b822505bb53264b999562347644c0e, type: 2}
+  responses: []
+  endStateChanges: []
+  recipiesToAdd: []

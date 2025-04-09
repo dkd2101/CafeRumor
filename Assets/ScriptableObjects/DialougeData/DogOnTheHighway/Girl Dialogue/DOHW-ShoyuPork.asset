@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fe7440aa4a0af64396546690742d361, type: 3}
+  m_Name: DOHW-ShoyuPork
+  m_EditorClassIdentifier: 
+  dialogue:
+  - text: I know you asked for a coffee but I actually made too much of this shoyu
+      pork so I wanted to give this to you on the house
+    characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+  - text: Oh? This is very far off from the coffee.
+    characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+  - text: Yeah... sorry about that. But I hope you enjoy!
+    characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+  - text: "Wow\u2026this\u2026man this tastes exactly like\u2026like the shoyu pork
+      my mom makes at home. Man I may have to tell her that you stole her recipe
+      from her haha.\r\n"
+    characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+  - text: "I\u2019m honored that it meets such expectations. \r\n"
+    characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+  - text: "This feels like\u2026haha back to highschool\u2026when I\u2019d be running
+      my dog BENNY every morning definitely my peak fitness. Back when he\u2019d
+      wake me up every morning\u2026.and I\u2019d always sneak him this food because
+      he wasn\u2019t allowed to eat tablefood but he always came running at the smell
+      of this dish\r\n"
+    characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+  - text: Sounds like he has a favorite.
+    characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+  - text: "Yeah\u2026he did\r\n"
+    characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+  - text: "I-I\u2026I really miss him. Coming home to the house without him this
+      week felt so\u2026so wrong.  "
+    characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+  - text: Did he pass while you were away?
+    characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+  - text: "Ye. I wasn\u2019t home for a year because I got busy with college, friends,
+      track, life. I just\u2026never had time to come home. Then on day I just got
+      a call\u2026they told me BENNY had to be put down. He was sick and we agreed
+      that BENNY shouldn\u2019t have to live uncomfortably. I was so busy with everything
+      before I knew it, my childhood friend was gone. Without so much as a goodbye.
+      \r\n"
+    characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+  - text: "I\u2019m sure\u2026he definitely had you in his heart"
+    characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+  - text: " I hope..maybe? I never even cried for him. I just\u2026took a breath
+      and went to track practice. Kept going through life. Isn\u2019t that just so
+      mean of me?\r\n\r\n"
+    characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+  - text: "No not at all. I can understand to an extent. I recently just came back
+      from working in the city after college. You get so caught up with being away
+      from home that it\u2019s so easy to forget that home can change without you
+      here. Things that were always here can just\u2026no longer be here."
+    characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+  - text: Ye...not like I deserve to regret anything now
+    characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+  - text: "I think everyone deserves to look back. To grieve. It\u2019s hard to find
+      time to take a breath and turn around but when we find the time\u2026we should. "
+    characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+  - text: " \u2026"
+    characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+  - text: "Thank you. The meal\u2026was delicious and the conversation was great.
+      I\u2019ll be sure to come back whenever I come back home. For\u2026a breather."
+    characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+  conditionalBranches: []
+  responses: []
+  endStateChanges:
+  - rumorName: DogOnTheHighway
+    name: RecipeCreated
+    value: 1
+  recipiesToAdd: []

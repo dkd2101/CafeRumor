@@ -40,3 +40,10 @@ MonoBehaviour:
   - rumorName: DogOnTheHighway
     name: RumorIntro
     value: 1
+  - rumorName: DogOnTheHighway
+    name: Default1
+    value: 1
+  - rumorName: DogOnTheHighway
+    name: NoIntro
+    value: 0
+  recipiesToAdd: []
