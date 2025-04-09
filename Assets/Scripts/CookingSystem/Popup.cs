@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -13,9 +14,15 @@ public class Popup : MonoBehaviour
     private Button button;
     private TextMeshProUGUI buttonText;
 
+    private GameObject direction;
+    private GameObject recipe;
+    private Button recipeButton;
+
     private void Start()
     {
         popup.SetActive(false);
+        direction.SetActive(false);
+        recipeButton.onClick.AddListener(ShowRecipe);
     }
 
     private void Awake()
@@ -24,6 +31,21 @@ public class Popup : MonoBehaviour
         popupText = popup.GetComponentInChildren<TextMeshProUGUI>();
         button = popup.GetComponentInChildren<Button>();
         buttonText = button.GetComponentInChildren<TextMeshProUGUI>();
+
+        direction = GameObject.Find("Directions");
+        recipe = GameObject.Find("Recipe");
+        recipeButton = recipe.GetComponentInChildren<Button>();
+    }
+
+    private void Update()
+    {
+        if (direction.activeSelf && Input.GetMouseButtonDown(0))
+        {
+            if (!IsPointerOverUIObject())
+            {
+                direction.SetActive(false);
+            }
+        }
     }
     private void ReloadScene()
     {
@@ -45,11 +67,26 @@ public class Popup : MonoBehaviour
     {
         button.onClick.RemoveAllListeners();
         popupText.text = text;
-        popupText.fontSize = 25;
-        popupText.rectTransform.sizeDelta = new Vector2(370, 50);
+        popupText.fontSize = 20;
+        popupText.rectTransform.sizeDelta = new Vector2(390, 50);
         buttonText.text = "Continue!";
-        buttonText.fontSize = 20;
+        buttonText.fontSize = 16;
         popup.SetActive(true);
         button.onClick.AddListener(LoadOriginalScene);
+    }
+
+    public void ShowRecipe()
+    {
+        direction.SetActive(!direction.activeSelf);
+    }
+
+    private bool IsPointerOverUIObject()
+    {
+        PointerEventData eventData = new PointerEventData(EventSystem.current);
+        eventData.position = Input.mousePosition;
+
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventData, results);
+        return results.Count > 0;
     }
 }

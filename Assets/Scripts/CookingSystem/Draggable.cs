@@ -105,7 +105,7 @@ public class Draggable : MonoBehaviour
     }
 
     public void StartInBetweens() {
-        StartCoroutine("PlayInBetweens");
+       // StartCoroutine("PlayInBetweens");
         FindObjectOfType<InBetweenManager>().StartInBetweens(this.inBetweens);
     }
 }
