@@ -10,11 +10,9 @@ public class Drinks : MonoBehaviour
 {
     private List<string> ingredientList = new List<string>();
     private string drinkIngredients;
-
     public Button restart;
     public Button done;
     
-
     private void Start()
     {
         restart.onClick.AddListener(ReloadScene);
@@ -56,14 +54,10 @@ public class Drinks : MonoBehaviour
         }
 
         drinkIngredients = string.Join(" ", ingredientList);
-
         Item newDrink = ScriptableObject.CreateInstance<Item>();
         newDrink.itemName = drinkIngredients;
         newDrink.quantity = 1;
         InventorySystem.Instance.AddItem(newDrink);
         FindObjectOfType<Popup>().ShowWinPopup($"You made a {drinkIngredients}!");
-        
     }
-
-  
 }

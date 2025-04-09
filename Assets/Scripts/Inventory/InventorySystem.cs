@@ -39,19 +39,20 @@ public class InventorySystem : MonoBehaviour
 
         if (inventoryPanel != null)
         {
+            inventoryPanel.SetActive(false);
             itemButtonContainer = inventoryPanel.transform.Find("ButtonContainer");
-
+            /*
             if (itemButtonContainer == null)
             {
                 UnityEngine.Debug.LogWarning("ButtonContainer not found under InventoryPanel.");
-            }
+            }*/
         }
         else
         {
             UnityEngine.Debug.LogWarning("InventoryPanel not found in the scene.");
         }
 
-        inventoryPanel.SetActive(false);
+        // inventoryPanel.SetActive(false);
 
         recipesInventory.Add(coffee);
     }

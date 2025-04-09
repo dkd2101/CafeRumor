@@ -21,32 +21,46 @@ public class Popup : MonoBehaviour
     private void Start()
     {
         popup.SetActive(false);
-        direction.SetActive(false);
-        recipeButton.onClick.AddListener(ShowRecipe);
+        if(direction!= null)
+        {
+            direction.SetActive(false);
+            recipeButton.onClick.AddListener(ShowRecipe);
+        }
     }
 
     private void Awake()
     {
         popup = GameObject.Find("Popup");
-        popupText = popup.GetComponentInChildren<TextMeshProUGUI>();
-        button = popup.GetComponentInChildren<Button>();
-        buttonText = button.GetComponentInChildren<TextMeshProUGUI>();
-
+        if (popup != null)
+        {
+            popupText = popup.GetComponentInChildren<TextMeshProUGUI>();
+            button = popup.GetComponentInChildren<Button>();
+            buttonText = button.GetComponentInChildren<TextMeshProUGUI>();
+            UnityEngine.Debug.Log("popup is found");
+        }
         direction = GameObject.Find("Directions");
         recipe = GameObject.Find("Recipe");
-        recipeButton = recipe.GetComponentInChildren<Button>();
+        if (recipe != null)
+        {
+            recipeButton = recipe.GetComponentInChildren<Button>();
+        }
     }
 
     private void Update()
     {
-        if (direction.activeSelf && Input.GetMouseButtonDown(0))
+        if(direction != null)
         {
-            if (!IsPointerOverUIObject())
+            if (direction.activeSelf && Input.GetMouseButtonDown(0))
             {
-                direction.SetActive(false);
+                if (!IsPointerOverUIObject())
+                {
+                    direction.SetActive(false);
+                }
             }
         }
+        
     }
+
     private void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
