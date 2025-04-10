@@ -11,6 +11,7 @@ public class CardBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     [SerializeField] private TMP_Text recipeTitle;
     [SerializeField] private float yOffset = 30;
     [SerializeField] private GameObject fadeImage;
+    [SerializeField] private GameManager selectedCenter;
     private RectTransform rectTransform;
     private float startingYPos;
     private float curYPos;
@@ -64,11 +65,19 @@ public class CardBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         this.recipe = recipe;
     }
 
-    public void SetFadeImage(GameObject image) {
+    public void SetFadeImage(GameObject image)
+    {
         this.fadeImage = image;
     }
 
     public void OnPointerClick(PointerEventData eventData)
+    {
+        // go to the center area of the new screen
+        // display the finished image on the right
+        // put the recipe or description on the left
+    }
+
+    private void LoadCookingScene()
     {
         fadeImage.SetActive(true);
         fadeImage.GetComponent<Fader>().StartFadeIn();
