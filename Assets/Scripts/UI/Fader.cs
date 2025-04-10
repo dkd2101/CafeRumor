@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(CanvasGroup))]
 public class Fader : MonoBehaviour
@@ -22,6 +23,15 @@ public class Fader : MonoBehaviour
         isVisible = canvasGroup.alpha > 0.0f;
     }
 
+    void Start()
+    {
+        this.StartFadeOut();
+        SceneManager.sceneLoaded += AutoFadeOut;
+    }
+
+    private void AutoFadeOut(Scene scene, LoadSceneMode mode) {
+        this.StartFadeOut();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -43,6 +53,14 @@ public class Fader : MonoBehaviour
         Debug.Log(this.gameObject.name);
         isVisible = true;
         targetAlpha = 1.0f;
+        Debug.Log(targetAlpha);
+    }
+
+    public void StartFadeOut()
+    {
+        Debug.Log(this.gameObject.name);
+        isVisible = false;
+        targetAlpha = 0.0f;
         Debug.Log(targetAlpha);
     }
 }

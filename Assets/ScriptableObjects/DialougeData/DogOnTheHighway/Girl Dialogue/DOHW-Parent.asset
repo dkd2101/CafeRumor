@@ -16,18 +16,18 @@ MonoBehaviour:
   conditionalBranches:
   - branchConditions:
     - key: NoIntro
-      value: 1
+      value: 0
     requiredItems: []
     dialogueObject: {fileID: 11400000, guid: 79f9bba847d764544b2ac77b41f1ee1d, type: 2}
   - branchConditions:
     - key: RumorIntro
-      value: 1
+      value: 0
     requiredItems:
     - {fileID: 11400000, guid: a1534695e436aa14290cb04c91852a8b, type: 2}
     dialogueObject: {fileID: 11400000, guid: 84c17cd997f7c43b792e211e32986a6f, type: 2}
   - branchConditions:
     - key: Default1
-      value: 1
+      value: 0
     requiredItems: []
     dialogueObject: {fileID: 11400000, guid: 40983dffe17046b448c1ea0b8985b2d9, type: 2}
   - branchConditions:

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class RecipeCardManager : MonoBehaviour
 {
-
+    public static RecipeCardManager Instance { get; private set; }
     [SerializeField] private GameObject recipeCardPrefab;
     [SerializeField] private GameObject selectionMenu;
     [SerializeField] private GameObject cardZone;
@@ -17,6 +17,7 @@ public class RecipeCardManager : MonoBehaviour
     // instantiates all of the recipe cards in a row
     void Start()
     {
+        fadeImage = GameObject.Find("/Canvas/FadeImage");
         if (collectedRecipes == null || collectedRecipes.Count == 0)
         {
             collectedRecipes = InventorySystem.Instance.GetCollectedRecipes();
@@ -43,6 +44,7 @@ public class RecipeCardManager : MonoBehaviour
         selectionMenu.SetActive(false);
 
     }
+
 
     void Update()
     {

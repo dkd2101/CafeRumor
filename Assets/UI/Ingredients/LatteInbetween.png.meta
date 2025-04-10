@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 62db5d3abb329483ab456d481c84f4b2
+guid: 4dea1e74ec0a2496999332c14696d3f6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EspressoOne
+      name: Espresso1
       rect:
         serializedVersion: 2
         x: 33
@@ -137,8 +137,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0fae3e5541184fa5844af36ff660db7
-      internalID: -116875216
+      spriteID: abe1649a4c1fc47948f509a696449500
+      internalID: 814020123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Espresso3
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 1787
+        width: 282
+        height: 497
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8d7a5e4c80a74c32a4cd1ca9f58f330
+      internalID: -209888556
       vertices: []
       indices: 
       edges: []
@@ -158,29 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 573ea7c9a1b014b75b156a9a5ec35b12
-      internalID: -107903881
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Espresso3
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 1270
-        width: 283
-        height: 495
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ec9be8b55a5c84b0ea60db0103dc8904
-      internalID: -322192779
+      spriteID: 5a36e4fa8fefd4ab4aff8cf00a90b8f0
+      internalID: 715254477
       vertices: []
       indices: 
       edges: []
@@ -189,10 +189,10 @@ TextureImporter:
       name: Milk1
       rect:
         serializedVersion: 2
-        x: 386
-        y: 1210
-        width: 581
-        height: 561
+        x: 40
+        y: 1153
+        width: 582
+        height: 557
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a57dc3d5daf2345ae9fc7e4a4821a1a0
-      internalID: 475711565
+      spriteID: 8f972a204c8c44432a13bcd29de93cd0
+      internalID: 475307375
       vertices: []
       indices: 
       edges: []
@@ -210,10 +210,10 @@ TextureImporter:
       name: Milk2
       rect:
         serializedVersion: 2
-        x: 1011
-        y: 1213
-        width: 305
-        height: 559
+        x: 609
+        y: 1153
+        width: 307
+        height: 562
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7820ddc7959a8484cbc8355e6296301d
-      internalID: 42563400
+      spriteID: 8fe4d978c133e44fc9880d573d846208
+      internalID: 2089383899
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LatteInBetweens_5
+      name: Syrup1
       rect:
         serializedVersion: 2
-        x: 1408
-        y: 1296
-        width: 5
-        height: 5
+        x: 184
+        y: 583
+        width: 226
+        height: 469
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 1, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c22c9d6615de24ea487eab644f15db86
+      internalID: -1968520099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Syrup2
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 593
+        width: 421
+        height: 448
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,8 +263,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca9df6d68425d4626ab77e59dce3b2e1
-      internalID: -2044073449
+      spriteID: d51af2b81903f4e80a21e27188d51d87
+      internalID: 271559808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Syrup3
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 47
+        width: 418
+        height: 440
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2268814828f6f4c2ba41fe74c39d4612
+      internalID: 1396758635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Untitled_Artwork 3_8
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 460
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de83b6e394dbb4384a25da34cabebed4
+      internalID: -761922632
       vertices: []
       indices: 
       edges: []
@@ -259,12 +322,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Espresso2: -107903881
-      Espresso3: -322192779
-      EspressoOne: -116875216
-      LatteInBetweens_5: -2044073449
-      Milk1: 475711565
-      Milk2: 42563400
+      Espresso1: 814020123
+      Espresso2: 715254477
+      Espresso3: -209888556
+      Milk1: 475307375
+      Milk2: 2089383899
+      Syrup1: -1968520099
+      Syrup2: 271559808
+      Syrup3: 1396758635
+      Untitled_Artwork 3_8: -761922632
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
