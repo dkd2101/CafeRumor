@@ -10,19 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fe7440aa4a0af64396546690742d361, type: 3}
-  m_Name: DOHW-Benny-Success
+  m_Name: DOHW-Benny-Default
   m_EditorClassIdentifier: 
   dialogue:
-  - text: Success. I have eaten Pork
+  - text: rooof. rooof. dinner pwease.
     characterObject: {fileID: 11400000, guid: a856572eaa01ad341bd06829621ade8c, type: 2}
   conditionalBranches: []
   responses: []
-  endStateChanges:
-  - rumorName: DogOnTheHighway
-    name: Benny
-    value: 0
-  - rumorName: DogOnTheHighway
-    name: TalkedToBenny
-    value: 1
-  recipiesToAdd:
-  - {fileID: 11400000, guid: 48a64906a7df3434f867d4cf94fd9a6b, type: 2}
+  endStateChanges: []
+  recipiesToAdd: []

@@ -12,21 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fe7440aa4a0af64396546690742d361, type: 3}
   m_Name: DOHW-Benny-Parent
   m_EditorClassIdentifier: 
-  dialogue:
-  - text: PlaceHolder. Here take my recipe.
-    characterObject: {fileID: 11400000, guid: a856572eaa01ad341bd06829621ade8c, type: 2}
+  dialogue: []
   conditionalBranches:
   - branchConditions:
     - key: Benny
       value: 1
+    - key: RecipeCreated
+      value: 0
     requiredItems:
     - {fileID: 11400000, guid: 13d5c69048f357647a03adaf7e4b26ea, type: 2}
-    dialogueObject: {fileID: 11400000, guid: a4fbbcf76fd07e541b6f296946fd44e6, type: 2}
-  - branchConditions:
-    - key: Benny
-      value: 0
-    requiredItems: []
     dialogueObject: {fileID: 11400000, guid: 458a99e2e4cd0184cafa1c3e23583403, type: 2}
+  - branchConditions: []
+    requiredItems: []
+    dialogueObject: {fileID: 11400000, guid: a4fbbcf76fd07e541b6f296946fd44e6, type: 2}
   responses: []
   endStateChanges: []
   recipiesToAdd: []

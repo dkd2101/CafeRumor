@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cooking/Drink.unity
     guid: d63d8162f3fb10d47a020ad64ff05260
+  - enabled: 1
+    path: Assets/Scenes/TownScene.unity
+    guid: b9a63ac1b30626243a4abd0b9558e440
   m_configObjects: {}

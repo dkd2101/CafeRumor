@@ -27,10 +27,11 @@ MonoBehaviour:
   - text: "I\u2019m honored that it meets such expectations. \r\n"
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
   - text: "This feels like\u2026haha back to highschool\u2026when I\u2019d be running
-      my dog BENNY every morning definitely my peak fitness. Back when he\u2019d
-      wake me up every morning\u2026.and I\u2019d always sneak him this food because
-      he wasn\u2019t allowed to eat tablefood but he always came running at the smell
-      of this dish.\r\n"
+      my dog BENNY every morning definitely my peak fitness.\r\n"
+    characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+  - text: "Back when he\u2019d wake me up every morning\u2026.and I\u2019d always
+      sneak him this food because he wasn\u2019t allowed to eat tablefood but he
+      always came running at the smell of this dish."
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
   - text: Sounds like he has a favorite.
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
@@ -43,10 +44,11 @@ MonoBehaviour:
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
   - text: "Ye. I wasn\u2019t home for a year because I got busy with college, friends,
       track, life. I just\u2026never had time to come home. Then on day I just got
-      a call\u2026they told me BENNY had to be put down. He was sick and we agreed
-      that BENNY shouldn\u2019t have to live uncomfortably. I was so busy with everything
-      before I knew it, my childhood friend was gone. Without so much as a goodbye.
-      \r\n"
+      a call\u2026they told me BENNY had to be put down.\r\n"
+    characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+  - text: "He was sick and we agreed that BENNY shouldn\u2019t have to live uncomfortably.
+      I was so busy with everything before I knew it, my childhood friend was gone.
+      Without so much as a goodbye."
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
   - text: "I\u2019m sure\u2026he definitely had you in his heart"
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
@@ -54,10 +56,12 @@ MonoBehaviour:
       and went to track practice. Kept going through life. Isn\u2019t that just so
       mean of me?\r\n\r\n"
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
-  - text: "No not at all. I can understand to an extent. I recently just came back
-      from working in the city after college. You get so caught up with being away
-      from home that it\u2019s so easy to forget that home can change without you
-      here. Things that were always here can just\u2026no longer be here."
+  - text: No not at all. I can understand to an extent. I recently just came back
+      from working in the city after college.
+    characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+  - text: "You get so caught up with being away from home that it\u2019s so easy
+      to forget that home can change without you here. Things that were always here
+      can just\u2026no longer be here."
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
   - text: Ye... not like I deserve to regret anything now
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}

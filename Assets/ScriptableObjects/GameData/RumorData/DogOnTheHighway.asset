@@ -26,7 +26,7 @@ MonoBehaviour:
       see her but looks like she hasn''t been running on the street anymore since
       she''s got back from college. '
   - key: RecipeCreated
-    isCompleted: 0
+    isCompleted: 1
     statusDescription: Sarah seemed really touched by the shoyu pork recipe that
       Benny gave me. After confessing that Benny passed away while she was in college
       she seemed to come to terms with how things ended. I'm glad she was able to

@@ -9,6 +9,8 @@ public class BennyTrigger : MonoBehaviour
     private GameObject child;
 
     [SerializeField] private Item pork;
+
+    [SerializeField] private string rumorName = "DogOnTheHighway";
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +25,8 @@ public class BennyTrigger : MonoBehaviour
     {
         if (!child.activeSelf && other.CompareTag("Player"))
         {
-            if (!GameStateManager.getInstance().isRumorComplete("Dog on the Highway")
-                && GameStateManager.getInstance().getRumorData("Dog on the Highway", "Benny")
+            if (!GameStateManager.getInstance().isRumorComplete(rumorName)
+                && GameStateManager.getInstance().getRumorData(rumorName, "Benny")
                 && InventorySystem.Instance.HasItem(pork)
                 // Time? I want to make it a singleton so it is not ass to access.
                 )
