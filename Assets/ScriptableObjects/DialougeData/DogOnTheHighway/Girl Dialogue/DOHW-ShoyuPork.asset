@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - text: I know you asked for a coffee but I actually made too much of this shoyu
-      pork so I wanted to give this to you on the house
+      pork so I wanted to give this to you on the house.
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
   - text: Oh? This is very far off from the coffee.
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
@@ -30,11 +30,11 @@ MonoBehaviour:
       my dog BENNY every morning definitely my peak fitness. Back when he\u2019d
       wake me up every morning\u2026.and I\u2019d always sneak him this food because
       he wasn\u2019t allowed to eat tablefood but he always came running at the smell
-      of this dish\r\n"
+      of this dish.\r\n"
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
   - text: Sounds like he has a favorite.
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
-  - text: "Yeah\u2026he did\r\n"
+  - text: "Yeah\u2026he did.\r\n"
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
   - text: "I-I\u2026I really miss him. Coming home to the house without him this
       week felt so\u2026so wrong.  "
@@ -50,7 +50,7 @@ MonoBehaviour:
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
   - text: "I\u2019m sure\u2026he definitely had you in his heart"
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
-  - text: " I hope..maybe? I never even cried for him. I just\u2026took a breath
+  - text: " I hope... maybe? I never even cried for him. I just\u2026took a breath
       and went to track practice. Kept going through life. Isn\u2019t that just so
       mean of me?\r\n\r\n"
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
@@ -59,7 +59,7 @@ MonoBehaviour:
       from home that it\u2019s so easy to forget that home can change without you
       here. Things that were always here can just\u2026no longer be here."
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
-  - text: Ye...not like I deserve to regret anything now
+  - text: Ye... not like I deserve to regret anything now
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
   - text: "I think everyone deserves to look back. To grieve. It\u2019s hard to find
       time to take a breath and turn around but when we find the time\u2026we should. "

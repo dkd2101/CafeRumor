@@ -15,12 +15,12 @@ MonoBehaviour:
   rumorName: DogOnTheHighway
   rumorCheckpoints:
   - key: RumorIntro
-    isCompleted: 0
+    isCompleted: 1
     statusDescription: Rumor has it that a viscious beast will attack you if you
       go out on the street during the day with any sort of pork in your bag. It seems
       that we should be careful when we go out grocery shopping during the day....
   - key: Benny
-    isCompleted: 0
+    isCompleted: 1
     statusDescription: 'Turns out that viscious beast is actually that college girl''s
       past dog Benny. He doesn''t seem to realize he''s dead and really wants to
       see her but looks like she hasn''t been running on the street anymore since
@@ -39,9 +39,3 @@ MonoBehaviour:
       was not a beast at all and just a lonely family pet looking to see the daughter
       of his family one last time. You were able to help Sarah move on and Benny
       was able to see her walking on the street one last time. '
-  - key: NoIntro
-    isCompleted: 1
-    statusDescription: No Intro - If Testing - This is On.
-  - key: Default1
-    isCompleted: 1
-    statusDescription: Default Selection - If testing - This is Off
