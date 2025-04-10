@@ -3676,7 +3676,7 @@ GameObject:
   - component: {fileID: 2047117756}
   - component: {fileID: 2047117755}
   m_Layer: 0
-  m_Name: cafe_draftfloorplan
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3723,7 +3723,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 37c74a7e5cf104884a3c9ecc75438971, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5707cd163fe9b9844a60c7d35153913d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
