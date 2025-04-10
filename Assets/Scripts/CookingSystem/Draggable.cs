@@ -72,7 +72,7 @@ public class Draggable : MonoBehaviour
         {
             drinks.OnDrop(this);
         }
-        else if (hitCollider.TryGetComponent(out EspressoMachine espressoMachine))
+        else if (hitCollider != null && hitCollider.TryGetComponent(out EspressoMachine espressoMachine))
         {
             espressoMachine.OnTriggerEnter2D(col);
         }
