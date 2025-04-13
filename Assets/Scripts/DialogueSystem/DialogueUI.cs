@@ -57,7 +57,7 @@ public class DialogueUI : MonoBehaviour
             // must wait a frame to make sure advanceDialogue is not still triggered
             yield return null;
 
-            yield return new WaitUntil(() => InputManager.advanceDialogue.triggered);
+            yield return new WaitUntil(() => InputManager.Instance.advanceDialogue.triggered);
         }
 
         if (dialogueObject.HasConditionalBranches)
@@ -90,7 +90,7 @@ public class DialogueUI : MonoBehaviour
         {
             yield return null;
             
-            if (InputManager.advanceDialogue.triggered)
+            if (InputManager.Instance.advanceDialogue.triggered)
             {
                 typewriterEffect.Stop();
             }
