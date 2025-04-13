@@ -12,11 +12,18 @@ public class Drinks : MonoBehaviour
     private string drinkIngredients;
     public Button restart;
     public Button done;
+    public GameObject latte;
+    public GameObject cup;
     
     private void Start()
     {
         restart.onClick.AddListener(ReloadScene);
         done.onClick.AddListener(AddInventory);
+    }
+
+    public void Update()
+    {
+        done.gameObject.SetActive(ingredientList.Count != 0);
     }
 
     public void OnDrop(Draggable ingredient)
@@ -27,7 +34,8 @@ public class Drinks : MonoBehaviour
         Destroy(ingredient.gameObject);
     }
 
-    public void AddEspresso() {
+    public void AddEspresso()
+    {
         ingredientList.Add("Espresso Pod");
     }
 
@@ -50,14 +58,24 @@ public class Drinks : MonoBehaviour
         else if (hasEspresso)
         {
             ingredientList.Remove("Espresso Pod");
-            ingredientList.Add("Coffee"); 
+            ingredientList.Add("Coffee");
         }
-
+        
         drinkIngredients = string.Join(" ", ingredientList);
         Item newDrink = ScriptableObject.CreateInstance<Item>();
         newDrink.itemName = drinkIngredients;
         newDrink.quantity = 1;
         InventorySystem.Instance.AddItem(newDrink);
+        cup.SetActive(false);
+        latte.SetActive(true);
+        Invoke("ShowWinPopup", 1f);
+        restart.gameObject.SetActive(false);
+        done.gameObject.SetActive(false);
+    }
+
+    private void ShowWinPopup()
+    {
         FindObjectOfType<Popup>().ShowWinPopup($"You made a {drinkIngredients}!");
+        
     }
 }

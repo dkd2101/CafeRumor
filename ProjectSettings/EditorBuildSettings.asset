@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TownScene.unity
     guid: b9a63ac1b30626243a4abd0b9558e440
+  - enabled: 1
+    path: Assets/Scenes/Theater.unity
+    guid: 3565632580469744499fe98b87ed8fde
+  - enabled: 1
+    path: Assets/Scenes/School.unity
+    guid: 693c4674489de874f834ad2d1cc1a701
   m_configObjects: {}
