@@ -33,20 +33,22 @@ public class PlayerMovement : MonoBehaviour
             return;
         };
         
-        movement.Set(InputManager.Moveement.x, InputManager.Moveement.y);
+        movement.Set(InputManager.Movement.x, InputManager.Movement.y);
 
         rb.velocity = movement * moveSpeed;
 
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
 
-        if (movement != Vector2.zero)
-        {
-            animator.SetFloat("LastHorizontal", movement.x);
-            animator.SetFloat("LastVertical", movement.y);
-        }
+        
+        //TODO: Fix
+        // if (movement != Vector2.zero)
+        // {
+        //     animator.SetFloat("LastHorizontal", movement.x);
+        //     animator.SetFloat("LastVertical", movement.y);
+        // }
 
-        if (InputManager.interactKey.triggered && !dialogueUI.IsOpen)
+        if (InputManager.Instance.interactKey.triggered && !dialogueUI.IsOpen)
         {
             interactable?.Interact(this);
         }

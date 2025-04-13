@@ -1,3 +1,5 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GhostWiggle : MonoBehaviour
@@ -11,6 +13,7 @@ public class GhostWiggle : MonoBehaviour
     public float maxScale = 1;
     public float topWiggleAmount = 0.2f; // Side-to-side movement strength
 
+    private float currentTopWiggleAmount;
     private Vector3 pivotPoint; // Bottom middle pivot
     private int topLeftIndex = -1, topRightIndex = -1; // Indices for top points
 
@@ -18,7 +21,19 @@ public class GhostWiggle : MonoBehaviour
     {
         mesh = GetComponent<MeshFilter>().mesh;
         baseVertices = mesh.vertices.Clone() as Vector3[];
+        
+        scaleFactor = 0f;
+        currentTopWiggleAmount = topWiggleAmount;
+        Vector3[] collapsedVertices = new Vector3[baseVertices.Length];
+        for (int i = 0; i < collapsedVertices.Length; i++)
+        {
+            collapsedVertices[i] = pivotPoint; // or Vector3.zero, but pivotPoint looks better
+        }
 
+        // makes sure there is not a frame where it starts at full scale
+        mesh.vertices = collapsedVertices;
+        mesh.RecalculateBounds();
+        
         // Find the bottom middle point
         float minY = float.MaxValue, maxY = float.MinValue;
         float sumX = 0;
@@ -62,6 +77,10 @@ public class GhostWiggle : MonoBehaviour
 
     void Update()
     {
+        if (scaleFactor == maxScale)
+        {
+            currentTopWiggleAmount = Mathf.MoveTowards(currentTopWiggleAmount, 0, scaleSpeed * Time.deltaTime);
+        }
         Vector3[] vertices = new Vector3[baseVertices.Length];
 
         for (int i = 0; i < baseVertices.Length; i++)
@@ -81,7 +100,7 @@ public class GhostWiggle : MonoBehaviour
             // Apply horizontal side-to-side motion ONLY for top points
             if (i == topLeftIndex || i == topRightIndex)
             {
-                float horizontalOffset = Mathf.Sin(Time.time * waveSpeed) * topWiggleAmount;
+                float horizontalOffset = Mathf.Sin(Time.time * waveSpeed) * currentTopWiggleAmount;
                 scaledVertex.x += horizontalOffset;
             }
 
@@ -92,7 +111,6 @@ public class GhostWiggle : MonoBehaviour
         mesh.vertices = vertices;
         mesh.RecalculateBounds();
 
-        // Smoothly increase scaleFactor
-        scaleFactor = Mathf.Lerp(scaleFactor, maxScale, scaleSpeed * Time.deltaTime);
+        scaleFactor = Mathf.MoveTowards(scaleFactor, maxScale, scaleSpeed * Time.deltaTime);
     }
 }

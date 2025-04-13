@@ -11,6 +11,8 @@ public class BennyTrigger : MonoBehaviour
     [SerializeField] private Item pork;
 
     [SerializeField] private string rumorName = "DogOnTheHighway";
+
+    [SerializeField] private SpiritCutSceneManager spiritCutSceneManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +33,7 @@ public class BennyTrigger : MonoBehaviour
                 // Time? I want to make it a singleton so it is not ass to access.
                 )
             {
-                child.SetActive(true);
+                spiritCutSceneManager.StartAppearance(child);
                 // InventorySystem.Instance.RemoveItem("Pork");
             }
         }
