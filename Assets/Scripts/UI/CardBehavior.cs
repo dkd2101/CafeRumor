@@ -75,6 +75,7 @@ public class CardBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         // go to the center area of the new screen
         // display the finished image on the right
         // put the recipe or description on the left
+        LoadCookingScene();
     }
 
     private void LoadCookingScene()
