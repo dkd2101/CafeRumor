@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
-using Microsoft.Unity.VisualStudio.Editor;
+using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "RecipeData", menuName = "Recipes/RecipeObject")]
 public class RecipeSO : ScriptableObject
@@ -14,5 +14,7 @@ public class RecipeSO : ScriptableObject
 
     public string cookingSceneName;
 
-    public Image finishedImage;
+    public Sprite finishedImage;
+
+    public string description;
 }

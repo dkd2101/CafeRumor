@@ -16,3 +16,6 @@ MonoBehaviour:
   ingredients: []
   instructions: []
   cookingSceneName: Drink
+  finishedImage: {fileID: 21300000, guid: 590cb6b04113a486c868283e0e8fd0eb, type: 3}
+  description: 'A simple base with so many possibilities. As mom always said, "the
+    right cup of coffee will warm the soul". '

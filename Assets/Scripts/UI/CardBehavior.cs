@@ -1,30 +1,41 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class CardBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     [SerializeField] private TMP_Text recipeTitle;
-    [SerializeField] private float yOffset = 30;
-    [SerializeField] private GameObject fadeImage;
-    [SerializeField] private GameManager selectedCenter;
+    [SerializeField] private float yOffset = 10;
+    private GameObject fadeImage;
+    private Image recipeDisplay;
+    private RectTransform onDeckZone;
     private RectTransform rectTransform;
+    private TMP_Text displayText;
     private float startingYPos;
+    private float startingXPos;
     private float curYPos;
+    private float curXPos;
     private float targetYPos;
+    private float targetXPos;
     private RecipeSO recipe;
+    private RecipeCardManager manager;
 
     // Start is called before the first frame update
     void OnEnable()
     {
         rectTransform = GetComponent<RectTransform>();
-        startingYPos = rectTransform.anchoredPosition.y;
-        curYPos = rectTransform.anchoredPosition.y;
-        targetYPos = rectTransform.anchoredPosition.y;
+        startingYPos = rectTransform.position.y;
+        startingXPos = rectTransform.position.x;
+        curYPos = rectTransform.position.y;
+        curXPos = rectTransform.position.x;
+        targetYPos = rectTransform.position.y;
+        targetXPos = rectTransform.position.x;
     }
 
     // Update is called once per frame
@@ -37,20 +48,31 @@ public class CardBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
             {
                 curYPos = targetYPos;
             }
-            rectTransform.anchoredPosition = new Vector2(rectTransform.anchoredPosition.x, curYPos);
+            rectTransform.position = new Vector2(curXPos, curYPos);
+        }
+
+        if (curXPos != targetXPos)
+        {
+            curXPos = Mathf.MoveTowards(curXPos, targetXPos, 300.0f * Time.deltaTime);
+            if (Math.Abs(curXPos - targetXPos) <= 0.01)
+            {
+                curXPos = targetXPos;
+            }
+            rectTransform.position = new Vector2(curXPos, curYPos);
         }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("pointer enter");
-        Debug.Log(startingYPos);
+        if (this == this.manager.selectedCard)
+            return;
         targetYPos = startingYPos + yOffset;
-        Debug.Log(targetYPos);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        if (this == this.manager.selectedCard)
+            return;
         Debug.Log("pointer exit");
         targetYPos = startingYPos;
     }
@@ -65,20 +87,44 @@ public class CardBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         this.recipe = recipe;
     }
 
-    public void SetFadeImage(GameObject image)
+    public void SetDisplayProperties(GameObject image, RectTransform deck, Image display, TMP_Text description, RecipeCardManager manager)
     {
         this.fadeImage = image;
+        this.onDeckZone = deck;
+        this.recipeDisplay = display;
+        this.manager = manager;
+        this.displayText = description;
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        // go to the center area of the new screen
-        // display the finished image on the right
-        // put the recipe or description on the left
-        LoadCookingScene();
+        if (this != this.manager.selectedCard)
+        {
+            Debug.Log("setting to selected");
+            this.manager.ResetSelectedCard();
+            this.manager.SetCurrCard(this);
+            Debug.Log("Previous target x: " + this.targetXPos);
+            targetXPos = this.onDeckZone.position.x;
+            targetYPos = this.onDeckZone.position.y;
+            Debug.Log("Current target x = " + this.targetXPos);
+            this.recipeDisplay.gameObject.SetActive(true);
+            this.displayText.gameObject.SetActive(true);
+            this.displayText.text = this.recipe.description;
+            this.recipeDisplay.sprite = this.recipe.finishedImage;
+        } else {
+            this.BackToHand();
+        }
     }
 
-    private void LoadCookingScene()
+    public void BackToHand()
+    {
+        Debug.Log("Deselecting this card");
+        this.manager.SetCurrCard(null);
+        this.targetXPos = startingXPos;
+        this.targetYPos = startingYPos;
+    }
+
+    public void LoadCookingScene()
     {
         fadeImage.SetActive(true);
         fadeImage.GetComponent<Fader>().StartFadeIn();

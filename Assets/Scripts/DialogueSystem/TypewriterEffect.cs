@@ -10,6 +10,8 @@ public class TypewriterEffect : MonoBehaviour
     [SerializeField] private float writeSpeed = 50;
     public bool IsRunning { get; private set; }
 
+    public AudioSource _audioSource;
+
     // used for waiting
     private readonly List<Punctuation> punctuations = new List<Punctuation>()
     {
@@ -18,10 +20,10 @@ public class TypewriterEffect : MonoBehaviour
     };
 
     private Coroutine typingCoroutine;
-    
-    public void Run(string textToType, TMP_Text textLabel)
+
+    public void Run(string textToType, TMP_Text textLabel, AudioClip voice, float pitch)
     {
-        typingCoroutine = StartCoroutine(TypeText(textToType, textLabel));
+        typingCoroutine = StartCoroutine(TypeText(textToType, textLabel, voice, pitch));
     }
 
     public void Stop()
@@ -30,7 +32,7 @@ public class TypewriterEffect : MonoBehaviour
         IsRunning = false;
     }
 
-    private IEnumerator TypeText(string textToType, TMP_Text textLabel)
+    private IEnumerator TypeText(string textToType, TMP_Text textLabel, AudioClip voice, float pitch)
     {
         IsRunning = true;
         float t = 0;
@@ -48,13 +50,20 @@ public class TypewriterEffect : MonoBehaviour
             for (int i = lastCharIndex; i < charIndex; i++)
             {
                 bool isLast = i >= textToType.Length - 1;
-                
-                
+
+
                 textLabel.text = textToType.Substring(0, i + 1);
 
                 if (IsPunctuation(textToType[i], out float waitTime) && !isLast && !IsPunctuation(textToType[i + 1], out _))
                 {
                     yield return new WaitForSeconds(waitTime);
+                }
+
+                if (_audioSource != null && !_audioSource.isPlaying)
+                {
+                    _audioSource.clip = voice;
+                    _audioSource.pitch = pitch;
+                    _audioSource.Play();
                 }
             }
 
@@ -78,7 +87,7 @@ public class TypewriterEffect : MonoBehaviour
         waitTime = default;
         return false;
     }
-    
+
     private readonly struct Punctuation
     {
         public readonly HashSet<char> punctuations;

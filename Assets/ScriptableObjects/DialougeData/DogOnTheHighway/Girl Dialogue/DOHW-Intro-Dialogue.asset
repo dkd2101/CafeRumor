@@ -17,23 +17,29 @@ MonoBehaviour:
 
 '
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+    pitch: 5
   - text: 'Hey there, it''s my first time here. I didn''t see a menu so I''m not
       sure what I can order?
 
 '
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+    pitch: 2.2
   - text: "Just tell me whatever you're in the mood for and I\u2019ll make it for
       you. \r\n"
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+    pitch: 2.2
   - text: 'Oh wow! Well, I just came back home to visit. My mom normally makes a
       LATTE. She uses a NUTTY syrup with an extra hint of SWEETNESS.
 
 '
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+    pitch: 2.2
   - text: "Do you think that\u2019s possible to get?\r"
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+    pitch: 2.2
   - text: "NUTTY syrup with extra SWEETNESS. Let me see what I can put together.\r"
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+    pitch: 2.2
   conditionalBranches: []
   responses: []
   endStateChanges:
@@ -47,3 +53,4 @@ MonoBehaviour:
     name: NoIntro
     value: 0
   recipiesToAdd: []
+  voice: {fileID: 8300000, guid: da87d9b8a81274ae6abf3ed30bdc276a, type: 3}
