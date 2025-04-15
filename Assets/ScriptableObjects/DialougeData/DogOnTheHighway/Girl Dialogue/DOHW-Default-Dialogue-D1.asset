@@ -18,6 +18,9 @@ MonoBehaviour:
 
 '
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+    pitch: 2.2
   conditionalBranches: []
   responses: []
   endStateChanges: []
+  recipiesToAdd: []
+  voice: {fileID: 8300000, guid: da87d9b8a81274ae6abf3ed30bdc276a, type: 3}

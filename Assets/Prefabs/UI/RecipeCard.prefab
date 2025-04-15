@@ -224,4 +224,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recipeTitle: {fileID: 4473365668973957720}
-  yOffset: 100
+  yOffset: 30

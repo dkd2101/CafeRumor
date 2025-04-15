@@ -11,6 +11,7 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] private TMP_Text textLabel;
     [SerializeField] private TMP_Text nameLabel;
     [SerializeField] private GameObject dialogueBox;
+    [SerializeField] private AudioClip voice;
     private TypewriterEffect typewriterEffect;
     
     public bool IsOpen { get; private set; }
@@ -45,10 +46,12 @@ public class DialogueUI : MonoBehaviour
         for (int i = 0; i < dialogueObject.Dialogue.Length; i++)
         {
             string dialogue = dialogueObject.Dialogue[i].Text;
+            AudioClip voiceClip = dialogueObject.Voice;
+            float voicePitch = dialogueObject.Dialogue[i].Pitch;
             string name = dialogueObject.Dialogue[i].CharacterObject.CharacterName;
             nameLabel.text = name;
             //TODO: look into making the character name background the same width as name?
-            yield return RunTypingEffect(dialogue);
+            yield return RunTypingEffect(dialogue, voiceClip, voicePitch);
             
             textLabel.text = dialogue;
 
@@ -82,9 +85,9 @@ public class DialogueUI : MonoBehaviour
         }
     }
 
-    private IEnumerator RunTypingEffect(string dialogue)
+    private IEnumerator RunTypingEffect(string dialogue, AudioClip voice, float pitch)
     {
-        typewriterEffect.Run(dialogue, textLabel);
+        typewriterEffect.Run(dialogue, textLabel, voice, pitch);
 
         while (typewriterEffect.IsRunning)
         {

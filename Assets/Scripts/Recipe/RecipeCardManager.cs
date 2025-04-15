@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
+using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class RecipeCardManager : MonoBehaviour
 {
@@ -13,6 +13,12 @@ public class RecipeCardManager : MonoBehaviour
     [SerializeField] private float offsetPlacement = 150;
     [SerializeField] private List<RecipeSO> collectedRecipes;
     [SerializeField] private GameObject fadeImage;
+    [SerializeField] private Image recipeDisplay;
+    [SerializeField] private RectTransform onDeckZone;
+    [SerializeField] private TMP_Text description;
+    [SerializeField] private Button selectRecipe;
+
+    public CardBehavior selectedCard;
 
     // instantiates all of the recipe cards in a row
     void Start()
@@ -36,12 +42,13 @@ public class RecipeCardManager : MonoBehaviour
             CardBehavior recipeCardBehavior = recipeCard.GetComponent<CardBehavior>();
             recipeCardBehavior.SetRecipeTitle(collectedRecipes[i].name);
             recipeCardBehavior.SetRecipeData(collectedRecipes[i]);
-            recipeCardBehavior.SetFadeImage(fadeImage);
+            recipeCardBehavior.SetDisplayProperties(fadeImage, onDeckZone, recipeDisplay, this.description, this);
 
             xPos += offsetPlacement;
         }
 
         selectionMenu.SetActive(false);
+        selectRecipe.onClick.AddListener(SelectCurrentRecipe);
 
     }
 
@@ -65,6 +72,29 @@ public class RecipeCardManager : MonoBehaviour
         CardBehavior recipeCardBehavior = recipeCard.GetComponent<CardBehavior>();
         recipeCardBehavior.SetRecipeTitle(recipe.name);
         recipeCardBehavior.SetRecipeData(recipe);
-        recipeCardBehavior.SetFadeImage(fadeImage);
+        recipeCardBehavior.SetDisplayProperties(fadeImage, onDeckZone, recipeDisplay, this.description, this);
+    }
+
+    public void SetCurrCard(CardBehavior card) {
+        this.selectedCard = card;
+        if(card == null) {
+            this.recipeDisplay.gameObject.SetActive(false);
+            this.description.gameObject.SetActive(false);
+            this.selectRecipe.gameObject.SetActive(false);
+        } else {
+            this.recipeCardPrefab.gameObject.SetActive(true);
+            this.description.gameObject.SetActive(true);
+            this.selectRecipe.gameObject.SetActive(true);
+        }
+    }
+
+    public void ResetSelectedCard() {
+        if(selectedCard != null) {
+            selectedCard.BackToHand();
+        } 
+    }
+
+    public void SelectCurrentRecipe() {
+        this.selectedCard.LoadCookingScene();
     }
 }

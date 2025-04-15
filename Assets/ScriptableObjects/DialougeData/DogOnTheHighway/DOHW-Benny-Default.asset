@@ -15,7 +15,9 @@ MonoBehaviour:
   dialogue:
   - text: rooof. rooof. dinner pwease.
     characterObject: {fileID: 11400000, guid: a856572eaa01ad341bd06829621ade8c, type: 2}
+    pitch: 2.2
   conditionalBranches: []
   responses: []
   endStateChanges: []
   recipiesToAdd: []
+  voice: {fileID: 8300000, guid: da87d9b8a81274ae6abf3ed30bdc276a, type: 3}
