@@ -124,6 +124,13 @@ public class CardBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         this.targetYPos = startingYPos;
     }
 
+    public void HardReset() {
+        this.targetXPos = startingXPos;
+        this.targetYPos = startingYPos;
+        rectTransform.position = new Vector2(startingXPos, startingYPos);
+        
+    }
+
     public void LoadCookingScene()
     {
         fadeImage.SetActive(true);

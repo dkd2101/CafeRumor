@@ -84,7 +84,7 @@ public class RecipeCardManager : MonoBehaviour
             this.description.gameObject.SetActive(false);
             this.selectRecipe.gameObject.SetActive(false);
         } else {
-            this.recipeCardPrefab.gameObject.SetActive(true);
+            this.recipeDisplay.gameObject.SetActive(true);
             this.description.gameObject.SetActive(true);
             this.selectRecipe.gameObject.SetActive(true);
         }
@@ -101,6 +101,12 @@ public class RecipeCardManager : MonoBehaviour
     }
 
     public void ExitMenu() {
+        if(this.selectedCard != null) {
+            selectedCard.HardReset();
+        }
         selectionMenu.SetActive(false);
+        this.description.gameObject.SetActive(false);
+        this.selectRecipe.gameObject.SetActive(false);
+        this.recipeDisplay.gameObject.SetActive(false);
     }
 }
