@@ -25,12 +25,12 @@ public class Fader : MonoBehaviour
 
     void Start()
     {
-        this.StartFadeOut();
+        this?.StartFadeOut();
         SceneManager.sceneLoaded += AutoFadeOut;
     }
 
     private void AutoFadeOut(Scene scene, LoadSceneMode mode) {
-        this.StartFadeOut();
+        this?.StartFadeOut();
     }
     // Update is called once per frame
     void Update()
@@ -57,8 +57,14 @@ public class Fader : MonoBehaviour
 
     public void StartFadeOut()
     {
-        isVisible = false;
-        targetAlpha = 0.0f;
-        Debug.Log(targetAlpha);
+            Debug.Log(this.gameObject.name);
+            isVisible = false;
+            targetAlpha = 0.0f;
+            Debug.Log(targetAlpha);
+    }
+    
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= AutoFadeOut;
     }
 }

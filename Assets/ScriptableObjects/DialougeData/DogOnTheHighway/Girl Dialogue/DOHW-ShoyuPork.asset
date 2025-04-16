@@ -24,50 +24,56 @@ MonoBehaviour:
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
     pitch: 2.2
   - text: "Wow\u2026this tastes exactly like\u2026like the shoyu pork my mom makes
-      at home. Man I may have to tell her that you stole her recipe from her haha.\r\n"
+      at home. Man I may have to tell her that you stole her recipe from her haha."
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
     pitch: 2.2
-  - text: "I\u2019m honored that it meets such expectations. \r\n"
+  - text: "I\u2019m honored that it meets such expectations."
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
     pitch: 2.2
   - text: "This feels like\u2026back in highschool\u2026when I\u2019d be running
-      my dog BENNY every morning. It was definitely my peak fitness.\r\n"
+      my dog BENNY every morning. It was definitely my peak fitness."
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
     pitch: 2.2
-  - text: "Back when he\u2019d wake me up every morning\u2026.and I\u2019d always
-      sneak him this food because he wasn\u2019t allowed to eat tablefood but he
-      always came running at the smell of this dish."
+  - text: "Back when he\u2019d wake me up every morning\u2026."
+    characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+    pitch: 2.2
+  - text: "I\u2019d always sneak him this food because he wasn\u2019t allowed to
+      eat tablefood but he always came running at the smell of this dish."
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
     pitch: 2.2
   - text: Sounds like he has a favorite.
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
     pitch: 2.2
-  - text: "Yeah\u2026he did.\r\n"
+  - text: "Yeah\u2026he did."
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
     pitch: 2.2
   - text: "I-I\u2026I really miss him. Coming home to the house without him this
-      week felt so\u2026so wrong.  "
+      week felt so\u2026so wrong."
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
     pitch: 2.2
   - text: Did he pass while you were away?
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
     pitch: 2.2
   - text: "Yeah. I wasn\u2019t home for a year because I got busy with college, friends,
-      track, life. I just\u2026never had time to come home. Then on day I just got
-      a call\u2026they told me BENNY had to be put down.\r\n"
+      track, life. I just\u2026never had time to come home."
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
     pitch: 2.2
-  - text: "He was sick and we agreed that BENNY shouldn\u2019t have to live uncomfortably.
-      I was so busy with everything before I knew it, my childhood friend was gone.
-      Without so much as a goodbye."
+  - text: "Then on day I just got a call\u2026they told me BENNY had to be put down."
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
     pitch: 2.2
-  - text: "I\u2019m sure\u2026he definitely had you in his heart"
+  - text: "He was sick and we agreed that BENNY shouldn\u2019t have to live uncomfortably."
+    characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+    pitch: 2.2
+  - text: I was so busy with everything before I knew it, my childhood friend was
+      gone. Without so much as a goodbye.
+    characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+    pitch: 2.2
+  - text: "I\u2019m sure\u2026he definitely had you in his heart."
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
     pitch: 2.2
-  - text: " I hope... maybe? I never even cried for him. I just\u2026took a breath
+  - text: "I hope... maybe? I never even cried for him. I just\u2026took a breath
       and went to track practice. Kept going through life. Isn\u2019t that just so
-      mean of me?\r\n\r\n"
+      mean of me?"
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
     pitch: 2.2
   - text: No not at all. I can understand to an extent. I recently just came back
@@ -75,15 +81,17 @@ MonoBehaviour:
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
     pitch: 2.2
   - text: "You get so caught up with being away from home that it\u2019s so easy
-      to forget that home can change without you here. Things that were always here
-      can just\u2026no longer be here."
+      to forget that home can change without you here."
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
     pitch: 2.2
-  - text: Yeah... not like I deserve to regret anything now
+  - text: "Things that were always here can just\u2026no longer be here."
+    characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+    pitch: 2.2
+  - text: Yeah... not like I deserve to regret anything now.
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
     pitch: 2.2
   - text: "I think everyone deserves to look back. To grieve. It\u2019s hard to find
-      time to take a breath and turn around but when we find the time\u2026we should. "
+      time to take a breath and turn around but when we find the time\u2026we should."
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
     pitch: 2.2
   - text: " \u2026"
