@@ -22,5 +22,16 @@ namespace GameState
                             + ". Consider checking your GameStateManager's rumorsData list.");
             }
         }
+
+        public void resetAllRumorStates(bool flag = false)
+        {
+            foreach (var rumorData in rumorsData)
+            {
+                foreach (var checkpoint in rumorData.getCheckpointsAsDictionary())
+                {
+                    rumorData.setCheckpointStatus(checkpoint.Key, flag);
+                }
+            }
+        }
     }
 }

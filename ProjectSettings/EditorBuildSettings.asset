@@ -5,12 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Cooking/Chicken Tenders.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/GAMEPLAY DEMOS/DialogueDemo.unity
-    guid: 6fc3ca8ed43c6934190938ba5f903630
+    path: Assets/Scenes/TitleScene.unity
+    guid: a8fcb0615c6d2a247bf3a36a590e75bf
+  - enabled: 1
+    path: Assets/Scenes/IntroScene.unity
+    guid: 53af34dc2f1a2344997a11e4133f2e37
   - enabled: 1
     path: Assets/Scenes/DogOnHighway.unity
     guid: 738045434752478458e6691fcb1e6d08
@@ -33,6 +33,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Cooking/Seasoned Pork.unity
     guid: 479e0dda32840314d848fe26d1b7700b
   - enabled: 1
-    path: Assets/Scenes/IntroScene.unity
-    guid: 53af34dc2f1a2344997a11e4133f2e37
+    path: Assets/Scenes/CreditsScene.unity
+    guid: be76febe2c9deb44a951a9b4bfa93a8c
   m_configObjects: {}

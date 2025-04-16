@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -45,6 +46,16 @@ namespace GameState
         public bool isRumorComplete(string rumorName)
         {
             return gameData.getRumorData(rumorName).isCompleted();
+        }
+
+        public void resetGameData(bool flag = false)
+        {
+            gameData.resetAllRumorStates(flag);
+        }
+
+        private void OnApplicationQuit()
+        {
+            resetGameData();
         }
     }
 }
