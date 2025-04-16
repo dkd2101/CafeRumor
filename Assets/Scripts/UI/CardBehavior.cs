@@ -126,8 +126,8 @@ public class CardBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void LoadCookingScene()
     {
-        fadeImage.SetActive(true);
-        fadeImage.GetComponent<Fader>().StartFadeIn();
+        fadeImage?.SetActive(true);
+        fadeImage?.GetComponent<Fader>().StartFadeIn();
         SceneManager.LoadScene(recipe.cookingSceneName);
     }
 }

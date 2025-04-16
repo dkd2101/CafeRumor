@@ -16,7 +16,10 @@ MonoBehaviour:
   - text: "You hit the RICH and NUTTY flavor of my moms coffee I\u2019m shocked.
       It\u2019s still missing that one ingredient with that SWEETNESS."
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+    pitch: 2.2
   conditionalBranches: []
   responses: []
   endStateChanges: []
-  recipiesToAdd: []
+  recipiesToAdd:
+  - {fileID: 11400000, guid: 3554a8c61266c1a4a8263cfcb317af9c, type: 2}
+  voice: {fileID: 0}

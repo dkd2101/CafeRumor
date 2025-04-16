@@ -15,8 +15,8 @@ MonoBehaviour:
   dialogue: []
   conditionalBranches:
   - branchConditions:
-    - key: NoIntro
-      value: 1
+    - key: RumorIntro
+      value: 0
     requiredItems: []
     dialogueObject: {fileID: 11400000, guid: 79f9bba847d764544b2ac77b41f1ee1d, type: 2}
   - branchConditions:
@@ -45,7 +45,7 @@ MonoBehaviour:
     requiredItems: []
     dialogueObject: {fileID: 11400000, guid: 40983dffe17046b448c1ea0b8985b2d9, type: 2}
   - branchConditions:
-    - key: RecipeCreated
+    - key: TalkedToBenny
       value: 1
     requiredItems:
     - {fileID: 11400000, guid: a8cc5238f02f387489580d324c663761, type: 2}
@@ -53,6 +53,9 @@ MonoBehaviour:
   - branchConditions:
     - key: Benny
       value: 1
+    requiredItems: []
+    dialogueObject: {fileID: 11400000, guid: 9c3de66ea3ee40043932212543e66553, type: 2}
+  - branchConditions: []
     requiredItems: []
     dialogueObject: {fileID: 11400000, guid: 9c3de66ea3ee40043932212543e66553, type: 2}
   responses: []

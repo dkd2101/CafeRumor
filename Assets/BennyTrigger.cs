@@ -17,7 +17,10 @@ public class BennyTrigger : MonoBehaviour
     void Start()
     {
         child = transform.GetChild(0).gameObject;
-        child.SetActive(false);
+        if (!GameStateManager.getInstance().getRumorData(rumorName, "RecipeCreated"))
+        {
+            child.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -25,7 +28,8 @@ public class BennyTrigger : MonoBehaviour
         if (!child.activeSelf && other.CompareTag("Player"))
         {
             if (!GameStateManager.getInstance().isRumorComplete(rumorName)
-                && GameStateManager.getInstance().getRumorData(rumorName, "LatteServed")
+                && !GameStateManager.getInstance().getRumorData(rumorName, "RecipeCreated")
+                && GameStateManager.getInstance().getRumorData(rumorName, "Benny")
                 && InventorySystem.Instance.HasItem(pork)
                 // Time? I want to make it a singleton so it is not ass to access.
                 )

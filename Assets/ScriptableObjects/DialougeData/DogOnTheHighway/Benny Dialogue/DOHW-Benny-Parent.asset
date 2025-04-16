@@ -22,14 +22,14 @@ MonoBehaviour:
     requiredItems:
     - {fileID: 11400000, guid: 13d5c69048f357647a03adaf7e4b26ea, type: 2}
     dialogueObject: {fileID: 11400000, guid: 458a99e2e4cd0184cafa1c3e23583403, type: 2}
-  - branchConditions: []
-    requiredItems: []
-    dialogueObject: {fileID: 11400000, guid: a4fbbcf76fd07e541b6f296946fd44e6, type: 2}
   - branchConditions:
     - key: RecipeCreated
       value: 1
     requiredItems: []
     dialogueObject: {fileID: 11400000, guid: e4f7f1ba36d60d64da3e3ba1e9f3c1f0, type: 2}
+  - branchConditions: []
+    requiredItems: []
+    dialogueObject: {fileID: 11400000, guid: a4fbbcf76fd07e541b6f296946fd44e6, type: 2}
   responses: []
   endStateChanges: []
   recipiesToAdd: []

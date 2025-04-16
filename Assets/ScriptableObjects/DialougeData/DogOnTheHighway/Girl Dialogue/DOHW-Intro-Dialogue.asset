@@ -46,8 +46,5 @@ MonoBehaviour:
   - rumorName: DogOnTheHighway
     name: RumorIntro
     value: 1
-  - rumorName: DogOnTheHighway
-    name: NoIntro
-    value: 0
   recipiesToAdd: []
   voice: {fileID: 8300000, guid: da87d9b8a81274ae6abf3ed30bdc276a, type: 3}
