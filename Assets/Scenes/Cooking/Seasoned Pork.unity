@@ -1874,8 +1874,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "1. Pour oil into the pot.\r\n2. Add chopped garlic and chopped onion into
-    the pot. \n3. Place pork into the pot.\n4. Add soy sauce, _____ and _____.\n"
+  m_text: '1. Place pork into the pot.
+
+    2. Add chopped garlic.
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac6c04302166549c396fa1daaf745ffc, type: 2}
   m_sharedMaterial: {fileID: -1601104844568431441, guid: ac6c04302166549c396fa1daaf745ffc, type: 2}
@@ -3344,22 +3347,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipeStages:
   - ingredients:
-    - Cooking Oil
-  - ingredients:
-    - Chopped Garlic
-    - Chopped Onion
-  - ingredients:
     - Pork
   - ingredients:
-    - Soy Sauce
-    - Brown Sugar
-    - Hazelnut
+    - Chopped Garlic
   spawnPoint: {fileID: 1532566475}
   spawnMappings:
-  - ingredientName: Hazelnut
-    spawnPrefab: {fileID: 5160110847198910920, guid: 0af5803a63cdbe24782a6a9f8076c202, type: 3}
-  cookedItem: {fileID: 11400000, guid: a8cc5238f02f387489580d324c663761, type: 2}
-  recipe: {fileID: 5160110847198910920, guid: 0af5803a63cdbe24782a6a9f8076c202, type: 3}
+  - ingredientName: Chopped Garlic
+    spawnPrefab: {fileID: 2899654687708743538, guid: e5cef67f1db71894ca25f63555182c11, type: 3}
+  cookedItem: {fileID: 11400000, guid: 13d5c69048f357647a03adaf7e4b26ea, type: 2}
+  recipe: {fileID: 2899654687708743538, guid: e5cef67f1db71894ca25f63555182c11, type: 3}
 --- !u!1 &1968878845
 GameObject:
   m_ObjectHideFlags: 0
