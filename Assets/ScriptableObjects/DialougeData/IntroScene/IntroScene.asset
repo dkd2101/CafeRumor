@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fe7440aa4a0af64396546690742d361, type: 3}
+  m_Name: IntroScene
+  m_EditorClassIdentifier: 
+  dialogue:
+  - text: '*riiiing riiing*'
+    characterObject: {fileID: 11400000, guid: aaafa996b931a454a9cc48e64541e42a, type: 2}
+    pitch: 2.2
+  - text: Hello?
+    characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+    pitch: 2.2
+  - text: "Hello. Is this \u2026. ?"
+    characterObject: {fileID: 11400000, guid: 6a4ea84afda56a741804890509b25d4b, type: 2}
+    pitch: 2.2
+  - text: "Yes it is. What\u2019s happening?"
+    characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+    pitch: 2.2
+  - text: Your mother passed last night and left everything in her will to you, her
+      last of kin. I wanted to know when you are able to come back home to verify
+      her will.
+    characterObject: {fileID: 11400000, guid: 6a4ea84afda56a741804890509b25d4b, type: 2}
+    pitch: 2.2
+  - text: "Oh my god. Umm\u2026 I\u2019ll be able to come back home tonight. Does
+      her will have anything specific that I need to look for?"
+    characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+    pitch: 2.2
+  - text: "Hmmm\u2026 I\u2019m afraid there is not much besides that she wants you
+      to keep running the cafe which I\u2019ll be able to give you once you\u2019re
+      here."
+    characterObject: {fileID: 11400000, guid: 6a4ea84afda56a741804890509b25d4b, type: 2}
+    pitch: 2.2
+  - text: "Okay. I\u2019ll see you soon."
+    characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+    pitch: 2.2
+  - text: See you soon.
+    characterObject: {fileID: 11400000, guid: 6a4ea84afda56a741804890509b25d4b, type: 2}
+    pitch: 2.2
+  - text: '*hangs up phone*'
+    characterObject: {fileID: 11400000, guid: aaafa996b931a454a9cc48e64541e42a, type: 2}
+    pitch: 2.2
+  - text: My mom... passed away? I don't know what to do. I guess I'll go home first
+      and figure it out from there.
+    characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+    pitch: 2.2
+  conditionalBranches: []
+  responses: []
+  endStateChanges: []
+  recipiesToAdd: []
+  voice: {fileID: 8300000, guid: a289c7cf0f9b34975a48e933b8dc9064, type: 3}

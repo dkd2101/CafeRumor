@@ -12,7 +12,7 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] private TMP_Text nameLabel;
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private AudioClip voice;
-    private TypewriterEffect typewriterEffect;
+    public TypewriterEffect typewriterEffect;
     
     public bool IsOpen { get; private set; }
 
