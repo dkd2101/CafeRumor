@@ -50,7 +50,6 @@ public class Fader : MonoBehaviour
 
     public void StartFadeIn()
     {
-        Debug.Log(this.gameObject.name);
         isVisible = true;
         targetAlpha = 1.0f;
         Debug.Log(targetAlpha);
@@ -58,7 +57,6 @@ public class Fader : MonoBehaviour
 
     public void StartFadeOut()
     {
-        Debug.Log(this.gameObject.name);
         isVisible = false;
         targetAlpha = 0.0f;
         Debug.Log(targetAlpha);
