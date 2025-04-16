@@ -13,48 +13,48 @@ MonoBehaviour:
   m_Name: DOHW-Benny
   m_EditorClassIdentifier: 
   dialogue:
-  - text: sniff sniff
+  - text: '*sniff sniff*'
     characterObject: {fileID: 11400000, guid: a856572eaa01ad341bd06829621ade8c, type: 2}
     pitch: 2.2
   - text: "Ah\u2026are you the\u2026brutal beast?"
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
     pitch: 2.2
-  - text: WHOAH YOU CAN SEE ME YOU CAN SEE ME
+  - text: WOAH YOU CAN SEE ME! YOU CAN SEE ME!
     characterObject: {fileID: 11400000, guid: a856572eaa01ad341bd06829621ade8c, type: 2}
     pitch: 2.2
   - text: "Yes I can\u2026beast?"
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
     pitch: 2.2
-  - text: WHOAH! YOU CAN HEAR ME TOO! NOT EVEN MY MY HUMANS COULD HEAR ME
+  - text: WHOAH! YOU CAN HEAR ME TOO! NOT EVEN MY HUMANS COULD HEAR ME
     characterObject: {fileID: 11400000, guid: a856572eaa01ad341bd06829621ade8c, type: 2}
     pitch: 2.2
-  - text: "Wow you\u2019re bouncing off the walls there\u2026nice to meet you my
-      names ___"
+  - text: "Wow... you\u2019re really bouncing off the walls there\u2026nice to meet
+      you my name is..."
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
     pitch: 2.2
-  - text: " HI HI HI HI I\u2019M BENNY. AT LEAST MY FAMILY CALL ME BENNY. But they
+  - text: "HI HI HI HI I\u2019M BENNY. AT LEAST MY FAMILY CALL ME BENNY. But they
       don\u2019t seem to see me anymore\u2026\r"
     characterObject: {fileID: 11400000, guid: a856572eaa01ad341bd06829621ade8c, type: 2}
     pitch: 2.2
   - text: "Ah Benny\u2026 do your uh\u2026humans? Live on this street?\r"
-    characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+    characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
     pitch: 2.2
-  - text: YE YE YE. My best friend would always run with me up and down and up and
-      down this street every day.
+  - text: MHM! My best friend would always run with me up and down and up and down
+      this street every day.
     characterObject: {fileID: 11400000, guid: a856572eaa01ad341bd06829621ade8c, type: 2}
     pitch: 2.2
   - text: But then one day she left and no one was there to run me up and down and
       up and down.
     characterObject: {fileID: 11400000, guid: a856572eaa01ad341bd06829621ade8c, type: 2}
     pitch: 2.2
-  - text: "But now I never see her again\u2026. I thought you might be her"
+  - text: "But now I never see her again\u2026. I thought you might be her..."
     characterObject: {fileID: 11400000, guid: a856572eaa01ad341bd06829621ade8c, type: 2}
     pitch: 2.2
   - text: Me? Why me?
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
     pitch: 2.2
-  - text: You smell yummy. Yummy like pork. My humans always cooked very very yummy
-      pork. My best friend always snuck me yummy pork under the table.
+  - text: You smell yummy. Yummy like pork. My humans always cooked very yummy pork.
+      My best friend always snuck me pork under the table.
     characterObject: {fileID: 11400000, guid: a856572eaa01ad341bd06829621ade8c, type: 2}
     pitch: 2.2
   - text: "I was very sad when she left and couldn\u2019t sneak some to me. Very
@@ -67,17 +67,17 @@ MonoBehaviour:
   - text: Yes. My humans said goodbye to me and looked very sad.
     characterObject: {fileID: 11400000, guid: a856572eaa01ad341bd06829621ade8c, type: 2}
     pitch: 2.2
-  - text: "I went to sleep and when I woke up my humans couldn\u2019t see me anymore
-      no matter how much I barked."
+  - text: "I went to sleep and when I woke up my humans couldn\u2019t see me anymore...
+      No matter how much I barked."
     characterObject: {fileID: 11400000, guid: a856572eaa01ad341bd06829621ade8c, type: 2}
     pitch: 2.2
   - text: "I wish I could\u2019ve stayed up longer. To say goodbye to my best friend."
     characterObject: {fileID: 11400000, guid: a856572eaa01ad341bd06829621ade8c, type: 2}
     pitch: 2.2
-  - text: "Wait you\u2019re best friend ran with you every morning right?"
+  - text: Wait your best friend ran with you every morning, right?
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
     pitch: 2.2
-  - text: Yes yes yes. I wonder if they remember me
+  - text: Yes. I wonder if they remember me!
     characterObject: {fileID: 11400000, guid: a856572eaa01ad341bd06829621ade8c, type: 2}
     pitch: 2.2
   - text: "I\u2026I think she definitely does. BENNY by any chance do you remember
@@ -90,10 +90,8 @@ MonoBehaviour:
   - text: "That was a lot of thought\u2026.for an anti-climactic answer."
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
     pitch: 2.2
-  - text: A recipe! Here can I see it for a bit?
-    characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
-    pitch: 2.2
-  - text: Pwah, here you go
+  - text: Oh! But i have this paper I ate that was next to the pork. It had yummy
+      sauce on it!
     characterObject: {fileID: 11400000, guid: a856572eaa01ad341bd06829621ade8c, type: 2}
     pitch: 2.2
   - text: "Oh..well at least most of it is here. BENNY I\u2019ll be back another
@@ -104,7 +102,7 @@ MonoBehaviour:
   responses: []
   endStateChanges:
   - rumorName: DogOnTheHighway
-    name: RecipeCreated
+    name: TalkedToBenny
     value: 1
   recipiesToAdd:
   - {fileID: 11400000, guid: 48a64906a7df3434f867d4cf94fd9a6b, type: 2}
