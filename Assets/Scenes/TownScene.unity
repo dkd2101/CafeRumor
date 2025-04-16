@@ -363,6 +363,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f58502d1c3441acad8715e04f76727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  advanceDialogue:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b3896b73-fca9-4533-b925-96399a1a38f1
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  interactKey:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: f45c580e-ce0c-4d75-8e44-fa78de1ce003
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!4 &305097785
 Transform:
   m_ObjectHideFlags: 0
@@ -1256,6 +1274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   writeSpeed: 50
+  _audioSource: {fileID: 0}
 --- !u!114 &628454233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1271,6 +1290,7 @@ MonoBehaviour:
   textLabel: {fileID: 1904141581}
   nameLabel: {fileID: 574068171}
   dialogueBox: {fileID: 696106929}
+  voice: {fileID: 0}
 --- !u!114 &628454234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1849,57 +1869,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 1, y: 1}
---- !u!1 &1157544223
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1157544226}
-  - component: {fileID: 1157544225}
-  m_Layer: 0
-  m_Name: UIManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1157544225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1157544223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae2e1e369f8974122865c9cc6089bb2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  recipeCardPrefab: {fileID: 7923894794180264537, guid: 883f3e6ac886241099724f4120cc5d39, type: 3}
-  selectionMenu: {fileID: 1694121912}
-  cardZone: {fileID: 437000146}
-  offsetPlacement: 150
-  collectedRecipes:
-  - {fileID: 11400000, guid: 5ae703c4c05d5454c85bb1d8f5930135, type: 2}
-  fadeImage: {fileID: 1612322107}
---- !u!4 &1157544226
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1157544223}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.4709854, y: 1.5066422, z: -0.019842649}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1209401504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2621,6 +2590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pork: {fileID: 11400000, guid: 13d5c69048f357647a03adaf7e4b26ea, type: 2}
   rumorName: DogOnTheHighway
+  spiritCutSceneManager: {fileID: 0}
 --- !u!58 &1607686557
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3471,7 +3441,6 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1157544226}
   - {fileID: 1288893719}
   - {fileID: 628454230}
   - {fileID: 914744094}
