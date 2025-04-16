@@ -14,6 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rumorName: DogOnTheHighway
   rumorCheckpoints:
+  - key: RumorIntro
+    isCompleted: 1
+    statusDescription: Rumor has it that a viscious beast will attack you if you
+      go out on the street during the day with any sort of pork in your bag. It seems
+      that we should be careful when we go out grocery shopping during the day....
   - key: Benny
     isCompleted: 1
     statusDescription: 'Turns out that viscious beast is actually that college girl''s
@@ -21,25 +26,22 @@ MonoBehaviour:
       see her but looks like she hasn''t been running on the street anymore since
       she''s got back from college. '
   - key: RecipeCreated
-    isCompleted: 0
+    isCompleted: 1
     statusDescription: Sarah seemed really touched by the shoyu pork recipe that
       Benny gave me. After confessing that Benny passed away while she was in college
       she seemed to come to terms with how things ended. I'm glad she was able to
       realize that the circumstances weren't her fault. I should probably check in
       with Benny and let him know....
   - key: TalkedToBenny
-    isCompleted: 1
+    isCompleted: 0
     statusDescription: 'Rumor has it that a viscious beast attacks you if you walk
       along the street during the day with pork in your bag. However turns out it
       was not a beast at all and just a lonely family pet looking to see the daughter
       of his family one last time. You were able to help Sarah move on and Benny
       was able to see her walking on the street one last time. '
-  - key: NoIntro
+  - key: Default1
     isCompleted: 0
     statusDescription: 
-  - key: RumorIntro
-    isCompleted: 1
-    statusDescription: 
-  - key: RumorCompleted
+  - key: NoIntro
     isCompleted: 0
     statusDescription: 

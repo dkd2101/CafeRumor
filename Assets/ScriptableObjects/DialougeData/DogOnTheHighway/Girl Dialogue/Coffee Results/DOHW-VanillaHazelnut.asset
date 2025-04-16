@@ -15,55 +15,76 @@ MonoBehaviour:
   dialogue:
   - text: Wow...wow! This takes me back.
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+    pitch: 2.2
   - text: I take it that it's successful?
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+    pitch: 2.2
   - text: Yeah. At the very least really close.
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+    pitch: 2.2
   - text: This reminds me of those cold winter mornings, walking the family dog before
       class and coming home to the breakfast my mom prepared for me.
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+    pitch: 2.2
   - text: Oh. Are you a big dog family?
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+    pitch: 2.2
   - text: Yeah... his name was BENNY. Big friendly guy filled with so much energy.
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+    pitch: 2.2
   - text: Too much honestly. I miss having to run with him every morning before I
       went to school. Haha.
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+    pitch: 2.2
   - text: Wow. A morning run every day is a lot for me to think about.
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+    pitch: 2.2
   - text: Yep. Benny definitely prepped for the track team in college.
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+    pitch: 2.2
   - text: There's no greater motivator to wake up early than a dog standing on top
       of you and barking louder than the alarm clock.
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+    pitch: 2.2
   - text: So you still keep up with all your running in college?
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+    pitch: 2.2
   - text: "Ye\u2026sorta I haven't run since I came back to visit so I feel myself
       getting out of shape.\r"
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+    pitch: 2.2
   - text: "Well, maybe I\u2019ll see you running your morning route if I ever buy
       ingredients during the day."
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+    pitch: 2.2
   - text: "Ye if I find the motivation without BENNY waking me up haha. But if you
       do you should definitely be careful.\r"
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+    pitch: 2.2
   - text: Careful?
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+    pitch: 2.2
   - text: Yeah, my mom told me this rumor when I came back.
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+    pitch: 2.2
   - text: "Rumor has it that if you walk outside during the day with any type of
       pork then you\u2019ll be attacked by some brutal monster!"
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+    pitch: 2.2
   - text: "Hmmm, well, thanks for the warning. Guess I\u2019ll adjust my grocery
       list."
     characterObject: {fileID: 11400000, guid: cbe03b5b437a53c438efbea7bf9f2a6f, type: 2}
+    pitch: 2.2
   - text: "Yeah, if you believe in the superstitions around town haha. But it\u2019s
       probably just a playground rumor nothing to worry about."
     characterObject: {fileID: 11400000, guid: acc6ee4d5a263aa488584013b170f75b, type: 2}
+    pitch: 2.2
   conditionalBranches: []
   responses: []
   endStateChanges:
   - rumorName: DogOnTheHighway
     name: Benny
     value: 1
-  recipiesToAdd: []
+  recipiesToAdd:
+  - {fileID: 11400000, guid: 3554a8c61266c1a4a8263cfcb317af9c, type: 2}
+  voice: {fileID: 8300000, guid: da87d9b8a81274ae6abf3ed30bdc276a, type: 3}
