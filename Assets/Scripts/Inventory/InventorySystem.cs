@@ -13,6 +13,7 @@ public class InventorySystem : MonoBehaviour
     [SerializeField] private Transform itemButtonContainer;
     [SerializeField] private GameObject itemButtonPrefab;
     [SerializeField] private RecipeSO coffee;
+    [SerializeField] private RecipeSO pork;
 
     private List<Item> inventoryItems = new List<Item>();
     private List<RecipeSO> recipesInventory = new List<RecipeSO>();
@@ -55,6 +56,7 @@ public class InventorySystem : MonoBehaviour
         // inventoryPanel.SetActive(false);
 
         recipesInventory.Add(coffee);
+        recipesInventory.Add(pork);
     }
 
     private void Update()

@@ -17,11 +17,15 @@ public class Popup : MonoBehaviour
     private GameObject direction;
     private GameObject recipe;
     private Button recipeButton;
+    private GameObject panel;
+    private GameObject winPanel;
+    private Button continueButton;
 
     private void Start()
     {
+        winPanel.SetActive(false);
         popup.SetActive(false);
-        if(direction!= null)
+        if (direction != null)
         {
             direction.SetActive(false);
             recipeButton.onClick.AddListener(ShowRecipe);
@@ -31,6 +35,9 @@ public class Popup : MonoBehaviour
     private void Awake()
     {
         popup = GameObject.Find("Popup");
+        panel = GameObject.Find("Popup/Panel");
+        winPanel = GameObject.Find("Popup/WinBackdrop");
+        continueButton = GameObject.Find("Popup/WinBackdrop/Continue").GetComponent<Button>();
         if (popup != null)
         {
             popupText = popup.GetComponentInChildren<TextMeshProUGUI>();
@@ -44,11 +51,13 @@ public class Popup : MonoBehaviour
         {
             recipeButton = recipe.GetComponentInChildren<Button>();
         }
+
+        continueButton.onClick.AddListener(LoadOriginalScene);
     }
 
     private void Update()
     {
-        if(direction != null)
+        if (direction != null)
         {
             if (direction.activeSelf && Input.GetMouseButtonDown(0))
             {
@@ -58,7 +67,7 @@ public class Popup : MonoBehaviour
                 }
             }
         }
-        
+
     }
 
     private void ReloadScene()
@@ -86,6 +95,8 @@ public class Popup : MonoBehaviour
         buttonText.text = "Continue!";
         buttonText.fontSize = 16;
         popup.SetActive(true);
+        panel.SetActive(false);
+        winPanel.SetActive(true);
         button.onClick.AddListener(LoadOriginalScene);
     }
 

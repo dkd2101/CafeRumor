@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +18,7 @@ public class RecipeCardManager : MonoBehaviour
     [SerializeField] private RectTransform onDeckZone;
     [SerializeField] private TMP_Text description;
     [SerializeField] private Button selectRecipe;
+    [SerializeField] private Button backButton;
 
     public CardBehavior selectedCard;
 
@@ -96,5 +98,9 @@ public class RecipeCardManager : MonoBehaviour
 
     public void SelectCurrentRecipe() {
         this.selectedCard.LoadCookingScene();
+    }
+
+    public void ExitMenu() {
+        selectionMenu.SetActive(false);
     }
 }

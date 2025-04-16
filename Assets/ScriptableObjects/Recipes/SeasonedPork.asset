@@ -16,5 +16,6 @@ MonoBehaviour:
   ingredients: []
   instructions: []
   cookingSceneName: Seasoned Pork
-  finishedImage: {fileID: 0}
-  description: Simple pork seasoned with garlic.
+  finishedImage: {fileID: 21300000, guid: 99c8f33e9338e482aa99a671d43a2ce7, type: 3}
+  description: Moms simple garlic pork recipe. I remember always eating this during
+    late night studying sessions.

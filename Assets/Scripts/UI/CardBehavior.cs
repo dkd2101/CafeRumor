@@ -43,7 +43,7 @@ public class CardBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     {
         if (curYPos != targetYPos)
         {
-            curYPos = Mathf.MoveTowards(curYPos, targetYPos, 300.0f * Time.deltaTime);
+            curYPos = Mathf.MoveTowards(curYPos, targetYPos, 500.0f * Time.deltaTime);
             if (Math.Abs(curYPos - targetYPos) <= 0.01)
             {
                 curYPos = targetYPos;
@@ -53,7 +53,7 @@ public class CardBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
         if (curXPos != targetXPos)
         {
-            curXPos = Mathf.MoveTowards(curXPos, targetXPos, 300.0f * Time.deltaTime);
+            curXPos = Mathf.MoveTowards(curXPos, targetXPos, 500.0f * Time.deltaTime);
             if (Math.Abs(curXPos - targetXPos) <= 0.01)
             {
                 curXPos = targetXPos;
@@ -126,8 +126,8 @@ public class CardBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void LoadCookingScene()
     {
-        fadeImage?.SetActive(true);
-        fadeImage?.GetComponent<Fader>().StartFadeIn();
+        fadeImage.SetActive(true);
+        fadeImage.GetComponent<Fader>().StartFadeIn();
         SceneManager.LoadScene(recipe.cookingSceneName);
     }
 }

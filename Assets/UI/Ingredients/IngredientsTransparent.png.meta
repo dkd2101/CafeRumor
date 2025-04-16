@@ -123,15 +123,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IngredientsTransparent_0
+      name: Flour
       rect:
         serializedVersion: 2
-        x: 74
+        x: 72
         y: 1881
         width: 426
         height: 456
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -144,7 +144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IngredientsTransparent_1
+      name: GarlicPowder
       rect:
         serializedVersion: 2
         x: 535
@@ -152,7 +152,7 @@ TextureImporter:
         width: 402
         height: 397
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -165,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IngredientsTransparent_2
+      name: EspressoMachine
       rect:
         serializedVersion: 2
         x: 1072
@@ -173,7 +173,7 @@ TextureImporter:
         width: 531
         height: 812
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,7 +194,7 @@ TextureImporter:
         width: 5
         height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,7 +215,7 @@ TextureImporter:
         width: 4
         height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -228,7 +228,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IngredientsTransparent_5
+      name: Oil
       rect:
         serializedVersion: 2
         x: 152
@@ -236,7 +236,7 @@ TextureImporter:
         width: 269
         height: 206
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -249,7 +249,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IngredientsTransparent_6
+      name: Water
       rect:
         serializedVersion: 2
         x: 486
@@ -257,7 +257,7 @@ TextureImporter:
         width: 269
         height: 209
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -270,7 +270,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IngredientsTransparent_7
+      name: Soy Sauce
       rect:
         serializedVersion: 2
         x: 799
@@ -278,7 +278,7 @@ TextureImporter:
         width: 292
         height: 219
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -291,7 +291,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IngredientsTransparent_8
+      name: Syrup
       rect:
         serializedVersion: 2
         x: 96
@@ -299,7 +299,7 @@ TextureImporter:
         width: 279
         height: 999
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -312,15 +312,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IngredientsTransparent_9
+      name: Syru
       rect:
         serializedVersion: 2
-        x: 385
+        x: 382
         y: 603
         width: 279
         height: 999
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -333,7 +333,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IngredientsTransparent_10
+      name: Syr
       rect:
         serializedVersion: 2
         x: 674
@@ -341,7 +341,7 @@ TextureImporter:
         width: 279
         height: 998
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -362,7 +362,7 @@ TextureImporter:
         width: 8
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -383,7 +383,7 @@ TextureImporter:
         width: 27
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -404,7 +404,7 @@ TextureImporter:
         width: 6
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -417,7 +417,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IngredientsTransparent_14
+      name: Onions
       rect:
         serializedVersion: 2
         x: 137
@@ -425,7 +425,7 @@ TextureImporter:
         width: 467
         height: 355
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -438,7 +438,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IngredientsTransparent_15
+      name: Pepper
       rect:
         serializedVersion: 2
         x: 813
@@ -446,7 +446,7 @@ TextureImporter:
         width: 195
         height: 165
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -467,7 +467,7 @@ TextureImporter:
         width: 6
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -488,7 +488,7 @@ TextureImporter:
         width: 10
         height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -511,24 +511,24 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      IngredientsTransparent_0: 149205428
-      IngredientsTransparent_1: 2026156618
-      IngredientsTransparent_10: 1338208991
+      EspressoMachine: 1327194648
+      Flour: 149205428
+      GarlicPowder: 2026156618
       IngredientsTransparent_11: -2143729901
       IngredientsTransparent_12: -947887699
       IngredientsTransparent_13: -1324114755
-      IngredientsTransparent_14: -111386539
-      IngredientsTransparent_15: 1304725527
       IngredientsTransparent_16: 1152564557
       IngredientsTransparent_17: 588389173
-      IngredientsTransparent_2: 1327194648
       IngredientsTransparent_3: -908390745
       IngredientsTransparent_4: -2056976075
-      IngredientsTransparent_5: -1969877488
-      IngredientsTransparent_6: -1137227168
-      IngredientsTransparent_7: 302643390
-      IngredientsTransparent_8: -954063060
-      IngredientsTransparent_9: 255460636
+      Oil: -1969877488
+      Onions: -111386539
+      Pepper: 1304725527
+      Soy Sauce: 302643390
+      Syr: 1338208991
+      Syru: 255460636
+      Syrup: -954063060
+      Water: -1137227168
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
