@@ -45,7 +45,7 @@ public class DialogueUI : MonoBehaviour
 
         for (int i = 0; i < dialogueObject.Dialogue.Length; i++)
         {
-            string dialogue = dialogueObject.Dialogue[i].Text;
+            string dialogue = dialogueObject.Dialogue[i].Text.TrimEnd();
             AudioClip voiceClip = dialogueObject.Voice;
             float voicePitch = dialogueObject.Dialogue[i].Pitch;
             string name = dialogueObject.Dialogue[i].CharacterObject.CharacterName;
