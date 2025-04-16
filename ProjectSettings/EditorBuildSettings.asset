@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cooking/Seasoned Pork.unity
     guid: 479e0dda32840314d848fe26d1b7700b
+  - enabled: 1
+    path: Assets/Scenes/IntroScene.unity
+    guid: 53af34dc2f1a2344997a11e4133f2e37
   m_configObjects: {}

@@ -12,7 +12,7 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] private TMP_Text nameLabel;
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private AudioClip voice;
-    private TypewriterEffect typewriterEffect;
+    public TypewriterEffect typewriterEffect;
     
     public bool IsOpen { get; private set; }
 
@@ -45,7 +45,7 @@ public class DialogueUI : MonoBehaviour
 
         for (int i = 0; i < dialogueObject.Dialogue.Length; i++)
         {
-            string dialogue = dialogueObject.Dialogue[i].Text;
+            string dialogue = dialogueObject.Dialogue[i].Text.TrimEnd();
             AudioClip voiceClip = dialogueObject.Voice;
             float voicePitch = dialogueObject.Dialogue[i].Pitch;
             string name = dialogueObject.Dialogue[i].CharacterObject.CharacterName;
