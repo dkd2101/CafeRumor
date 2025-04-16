@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,6 +12,8 @@ public class DropZone : MonoBehaviour
     [SerializeField] private List<RecipeStage> recipeStages; // Stages of the recipe
     [SerializeField] private Transform spawnPoint; // Location where new items spawn
     [SerializeField] private List<ItemSpawnMapping> spawnMappings; // List of mappings for item spawning
+    [InspectorLabel("The food item given to the player when they successfully complete the recipe.")]
+    [SerializeField] private Item cookedItem;
 
     private Dictionary<string, GameObject> spawnMap = new Dictionary<string, GameObject>();
     private List<string> currentIngredients = new List<string>();
@@ -109,6 +112,10 @@ public class DropZone : MonoBehaviour
             if (spawnMap.ContainsKey(lastIngredient))
             {
                 SpawnNewItem(spawnMap[lastIngredient]);
+                if (cookedItem)
+                {
+                    InventorySystem.Instance.AddItem(cookedItem);
+                }
             }
 
             currentIngredients.Clear();
